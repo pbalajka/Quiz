@@ -51,6 +51,8 @@ Temporary Items
 # =============== #
 Temp/
 Library/
+Builds/
+Builds.meta
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
