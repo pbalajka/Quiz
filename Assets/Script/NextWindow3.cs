@@ -1,11 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
-public class NexWindow2 : MonoBehaviour {
+public class NextWindow3 : MonoBehaviour {
 	private bool isAndroid;
 	// Use this for initialization
 	void Start () {
@@ -15,18 +11,18 @@ public class NexWindow2 : MonoBehaviour {
 			isAndroid = false;
 		}
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if (isAndroid) {
 			if (Input.touches.Length > 0 && Input.GetTouch (0).phase == TouchPhase.Began) {
-				SceneManager.LoadScene ("game1", LoadSceneMode.Single);
+				SceneManager.LoadScene ("game2", LoadSceneMode.Single);
 			}
 		} else {
 			if(Input.GetMouseButtonDown (0)) {
-				SceneManager.LoadScene ("game1", LoadSceneMode.Single);
+				SceneManager.LoadScene ("game2", LoadSceneMode.Single);
 			}
 		}
-	
+
 	}
 }
