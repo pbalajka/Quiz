@@ -1,10 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
 public class NexWindow2 : MonoBehaviour {
 	private bool isAndroid;
 	// Use this for initialization
