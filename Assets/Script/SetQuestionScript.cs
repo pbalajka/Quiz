@@ -18,6 +18,21 @@ public class SetQuestionScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		quest1 = MultiLanguageQuestScript.Get1Quest ();
+		quest2 = MultiLanguageQuestScript.Get2Quest ();
+		quest3 = MultiLanguageQuestScript.Get3Quest ();
+		quest4 = MultiLanguageQuestScript.Get4Quest ();
+		quest5 = MultiLanguageQuestScript.Get5Quest ();
+		quest6 = MultiLanguageQuestScript.Get6Quest ();
+		quest7 = MultiLanguageQuestScript.Get7Quest ();
+		quest8 = MultiLanguageQuestScript.Get8Quest ();
+		quest9 = MultiLanguageQuestScript.Get9Quest ();
+		quest10 = MultiLanguageQuestScript.Get10Quest ();
+		quest11 = MultiLanguageQuestScript.Get11Quest ();
+		quest12 = MultiLanguageQuestScript.Get12Quest ();
+
+
+
 		SetQuestion ();
 	}
 
