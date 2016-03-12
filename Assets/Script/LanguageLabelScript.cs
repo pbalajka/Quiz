@@ -8,30 +8,40 @@ public class LanguageLabelScript : MonoBehaviour {
 	private static string orENG = "or";
 	private static string continueENG = "CONTINUE";
 	private static string newGameENG = "START NEW";
+	private static string languageENG = "Language";
+	private static string questionENG = "Question";
 	//Talianske texty k tlacidlam a popisom
 	private static string saveIT;
 	private static string endIT;
 	private static string orIT;
 	private static string continueIT;
 	private static string newGameIT;
+	private static string languageIT = "Language";
+	private static string questionIT = "Question";
 	//Portugalske texty k tlacidlam a popisom
 	private static string savePT;
 	private static string endPT;
 	private static string orPT;
 	private static string continuePT;
 	private static string newGamePT;
+	private static string languagePT = "Language";
+	private static string questionPT = "Question";
 	//Spanielske texty k tlacidlam a popipublic string SaveENG {
 	private static string saveESP;
 	private static string endESP;
 	private static string orESP;
 	private static string continueESP;
 	private static string newGameESP;
+	private static string languageESP = "Language";
+	private static string questionESP = "Question";
 	//Rustina texty k tlacidlam a popisom
 	private static string saveRU;
 	private static string endRU;
 	private static string orRU;
 	private static string continueRU;
 	private static string newGameRU;
+	private static string languageRU = "Language";
+	private static string questionRU = "Question";
 	//Error ENG string
 	private static string errorENG = "Error";
 
@@ -117,6 +127,40 @@ public class LanguageLabelScript : MonoBehaviour {
 			return newGamePT;
 		case EnumLanguagesScript.Language.RU:
 			return newGameRU;
+		default :
+			return errorENG;
+		}
+	}
+
+	public static string GetLanguage() {
+		switch (EnumLanguagesScript.GetLanguage ()) {
+		case EnumLanguagesScript.Language.ENG:
+			return languageENG;
+		case EnumLanguagesScript.Language.IT:
+			return languageIT;
+		case EnumLanguagesScript.Language.ESP:
+			return languageESP;
+		case EnumLanguagesScript.Language.PT:
+			return languagePT;
+		case EnumLanguagesScript.Language.RU:
+			return languageRU;
+		default :
+			return errorENG;
+		}
+	}
+
+	public static string GetQuestion() {
+		switch (EnumLanguagesScript.GetLanguage ()) {
+		case EnumLanguagesScript.Language.ENG:
+			return questionENG;
+		case EnumLanguagesScript.Language.IT:
+			return questionIT;
+		case EnumLanguagesScript.Language.ESP:
+			return questionESP;
+		case EnumLanguagesScript.Language.PT:
+			return questionPT;
+		case EnumLanguagesScript.Language.RU:
+			return questionRU;
 		default :
 			return errorENG;
 		}
