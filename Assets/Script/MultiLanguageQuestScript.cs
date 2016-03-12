@@ -68,6 +68,9 @@ public class MultiLanguageQuestScript : MonoBehaviour {
 	private static string quest11RU;
 	private static string quest12RU;
 
+	//Error
+	private static string errorENG = "Error, do not load message";
+
 	public static string Get1Quest() {
 		switch (EnumLanguagesScript.GetLanguage ()) {
 		case EnumLanguagesScript.Language.ENG:
@@ -75,11 +78,13 @@ public class MultiLanguageQuestScript : MonoBehaviour {
 		case EnumLanguagesScript.Language.IT:
 			return quest1IT;
 		case EnumLanguagesScript.Language.ESP:
-			return quest1ESp;
+			return quest1ESP;
 		case EnumLanguagesScript.Language.PT:
 			return quest1PT;
 		case EnumLanguagesScript.Language.RU:
 			return quest1RU;
+		default :
+			return errorENG;
 		}
 	}
 
@@ -90,11 +95,13 @@ public class MultiLanguageQuestScript : MonoBehaviour {
 		case EnumLanguagesScript.Language.IT:
 			return quest2IT;
 		case EnumLanguagesScript.Language.ESP:
-			return quest2ESp;
+			return quest2ESP;
 		case EnumLanguagesScript.Language.PT:
 			return quest2PT;
 		case EnumLanguagesScript.Language.RU:
 			return quest2RU;
+		default :
+			return errorENG;
 		}
 	}
 
@@ -105,11 +112,13 @@ public class MultiLanguageQuestScript : MonoBehaviour {
 		case EnumLanguagesScript.Language.IT:
 			return quest3IT;
 		case EnumLanguagesScript.Language.ESP:
-			return quest3ESp;
+			return quest3ESP;
 		case EnumLanguagesScript.Language.PT:
 			return quest3PT;
 		case EnumLanguagesScript.Language.RU:
 			return quest3RU;
+		default :
+			return errorENG;
 		}
 	}
 
@@ -120,11 +129,13 @@ public class MultiLanguageQuestScript : MonoBehaviour {
 		case EnumLanguagesScript.Language.IT:
 			return quest4IT;
 		case EnumLanguagesScript.Language.ESP:
-			return quest4ESp;
+			return quest4ESP;
 		case EnumLanguagesScript.Language.PT:
 			return quest4PT;
 		case EnumLanguagesScript.Language.RU:
 			return quest4RU;
+		default :
+			return errorENG;
 		}
 	}
 
@@ -135,11 +146,13 @@ public class MultiLanguageQuestScript : MonoBehaviour {
 		case EnumLanguagesScript.Language.IT:
 			return quest5IT;
 		case EnumLanguagesScript.Language.ESP:
-			return quest5ESp;
+			return quest5ESP;
 		case EnumLanguagesScript.Language.PT:
 			return quest5PT;
 		case EnumLanguagesScript.Language.RU:
 			return quest5RU;
+		default :
+			return errorENG;
 		}
 	}
 		public static string Get6Quest() {
@@ -149,11 +162,13 @@ public class MultiLanguageQuestScript : MonoBehaviour {
 		case EnumLanguagesScript.Language.IT:
 			return quest6IT;
 		case EnumLanguagesScript.Language.ESP:
-			return quest6ESp;
+			return quest6ESP;
 		case EnumLanguagesScript.Language.PT:
 			return quest6PT;
 		case EnumLanguagesScript.Language.RU:
 			return quest6RU;
+		default :
+			return errorENG;
 		}
 	}
 
@@ -164,11 +179,13 @@ public class MultiLanguageQuestScript : MonoBehaviour {
 		case EnumLanguagesScript.Language.IT:
 			return quest7IT;
 		case EnumLanguagesScript.Language.ESP:
-			return quest7ESp;
+			return quest7ESP;
 		case EnumLanguagesScript.Language.PT:
 			return quest7PT;
 		case EnumLanguagesScript.Language.RU:
 			return quest7RU;
+		default :
+			return errorENG;
 		}
 	}
 
@@ -179,11 +196,13 @@ public class MultiLanguageQuestScript : MonoBehaviour {
 		case EnumLanguagesScript.Language.IT:
 			return quest8IT;
 		case EnumLanguagesScript.Language.ESP:
-			return quest8ESp;
+			return quest8ESP;
 		case EnumLanguagesScript.Language.PT:
 			return quest8PT;
 		case EnumLanguagesScript.Language.RU:
 			return quest8RU;
+		default :
+			return errorENG;
 		}
 	}
 		public static string Get9Quest() {
@@ -193,11 +212,13 @@ public class MultiLanguageQuestScript : MonoBehaviour {
 		case EnumLanguagesScript.Language.IT:
 			return quest9IT;
 		case EnumLanguagesScript.Language.ESP:
-			return quest9ESp;
+			return quest9ESP;
 		case EnumLanguagesScript.Language.PT:
 			return quest9PT;
 		case EnumLanguagesScript.Language.RU:
 			return quest9RU;
+		default :
+			return errorENG;
 		}
 	}
 		public static string Get10Quest() {
@@ -207,11 +228,13 @@ public class MultiLanguageQuestScript : MonoBehaviour {
 		case EnumLanguagesScript.Language.IT:
 			return quest10IT;
 		case EnumLanguagesScript.Language.ESP:
-			return quest10ESp;
+			return quest10ESP;
 		case EnumLanguagesScript.Language.PT:
 			return quest10PT;
 		case EnumLanguagesScript.Language.RU:
 			return quest10RU;
+		default :
+			return errorENG;
 		}
 	}
 
@@ -222,11 +245,13 @@ public class MultiLanguageQuestScript : MonoBehaviour {
 		case EnumLanguagesScript.Language.IT:
 			return quest11IT;
 		case EnumLanguagesScript.Language.ESP:
-			return quest11ESp;
+			return quest11ESP;
 		case EnumLanguagesScript.Language.PT:
 			return quest11PT;
 		case EnumLanguagesScript.Language.RU:
 			return quest11RU;
+		default :
+			return errorENG;
 		}
 	}
 		public static string Get12Quest() {
@@ -236,11 +261,13 @@ public class MultiLanguageQuestScript : MonoBehaviour {
 		case EnumLanguagesScript.Language.IT:
 			return quest12IT;
 		case EnumLanguagesScript.Language.ESP:
-			return quest12ESp;
+			return quest12ESP;
 		case EnumLanguagesScript.Language.PT:
 			return quest12PT;
 		case EnumLanguagesScript.Language.RU:
 			return quest12RU;
+		default :
+			return errorENG;
 		}
 	}
 }
