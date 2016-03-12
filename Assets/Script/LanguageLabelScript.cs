@@ -11,13 +11,13 @@ public class LanguageLabelScript : MonoBehaviour {
 	private static string languageENG = "LANGUAGE";
 	private static string questionENG = "Question";
 	//Talianske texty k tlacidlam a popisom
-	private static string saveIT;
-	private static string endIT;
-	private static string orIT;
-	private static string continueIT;
-	private static string newGameIT;
-	private static string languageIT = "Language";
-	private static string questionIT = "Question";
+	private static string saveIT="itali";
+	private static string endIT="itali";
+	private static string orIT="itali";
+	private static string continueIT="itali";
+	private static string newGameIT="itali";
+	private static string languageIT = "itali";
+	private static string questionIT = "itali";
 	//Portugalske texty k tlacidlam a popisom
 	private static string savePT;
 	private static string endPT;
