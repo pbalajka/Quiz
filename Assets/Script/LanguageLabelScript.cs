@@ -8,7 +8,7 @@ public class LanguageLabelScript : MonoBehaviour {
 	private static string orENG = "or";
 	private static string continueENG = "CONTINUE";
 	private static string newGameENG = "START NEW";
-	private static string languageENG = "Language";
+	private static string languageENG = "LANGUAGE";
 	private static string questionENG = "Question";
 	//Talianske texty k tlacidlam a popisom
 	private static string saveIT;
