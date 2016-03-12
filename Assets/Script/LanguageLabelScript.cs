@@ -3,11 +3,11 @@ using System.Collections;
 
 public class LanguageLabelScript : MonoBehaviour {
 	//Anglicke texty k tlacidlam a popisom
-	private static string saveENG;
-	private static string endENG;
-	private static string orENG;
-	private static string continueENG;
-	private static string newGameENG;
+	private static string saveENG = "Save";
+	private static string endENG = "End";
+	private static string orENG = "or";
+	private static string continueENG = "CONTINUE";
+	private static string newGameENG = "START NEW";
 	//Talianske texty k tlacidlam a popisom
 	private static string saveIT;
 	private static string endIT;
@@ -32,89 +32,93 @@ public class LanguageLabelScript : MonoBehaviour {
 	private static string orRU;
 	private static string continueRU;
 	private static string newGameRU;
+	//Error ENG string
+	private static string errorENG = "Error";
 
-	//Pre ENG getery
-	public static string GetSaveENG() {
-		return saveENG;
+
+
+	public static string GetSave() {
+		switch (EnumLanguagesScript.GetLanguage ()) {
+		case EnumLanguagesScript.Language.ENG:
+			return saveENG;
+		case EnumLanguagesScript.Language.IT:
+			return saveIT;
+		case EnumLanguagesScript.Language.ESP:
+			return saveESP;
+		case EnumLanguagesScript.Language.PT:
+			return savePT;
+		case EnumLanguagesScript.Language.RU:
+			return saveRU;
+		default :
+			return errorENG;
+		}
 	}
 
-	public static string GetEndENG() {
-		return endENG;
+	public static string GetExit() {
+		switch (EnumLanguagesScript.GetLanguage ()) {
+		case EnumLanguagesScript.Language.ENG:
+			return endENG;
+		case EnumLanguagesScript.Language.IT:
+			return endIT;
+		case EnumLanguagesScript.Language.ESP:
+			return endESP;
+		case EnumLanguagesScript.Language.PT:
+			return endPT;
+		case EnumLanguagesScript.Language.RU:
+			return endRU;
+		default :
+			return errorENG;
+		}
 	}
 
-	public static string GetOrENG() {
-		return orENG;
+	public static string GetOr() {
+		switch (EnumLanguagesScript.GetLanguage ()) {
+		case EnumLanguagesScript.Language.ENG:
+			return orENG;
+		case EnumLanguagesScript.Language.IT:
+			return orIT;
+		case EnumLanguagesScript.Language.ESP:
+			return orESP;
+		case EnumLanguagesScript.Language.PT:
+			return orPT;
+		case EnumLanguagesScript.Language.RU:
+			return orRU;
+		default :
+			return errorENG;
+		}
 	}
 
-	public static string GetContinueENG() {
-		return continueENG;
+	public static string GetContinue() {
+		switch (EnumLanguagesScript.GetLanguage ()) {
+		case EnumLanguagesScript.Language.ENG:
+			return continueENG;
+		case EnumLanguagesScript.Language.IT:
+			return continueIT;
+		case EnumLanguagesScript.Language.ESP:
+			return continueESP;
+		case EnumLanguagesScript.Language.PT:
+			return continuePT;
+		case EnumLanguagesScript.Language.RU:
+			return continueRU;
+		default :
+			return errorENG;
+		}
 	}
 
-	public static string GetNewGameENG() {
-		return newGameENG;
-	}
-
-	//Pre IT getery
-	public static string GetSaveIT() {
-		return saveIT;
-	}
-
-	public static string GetEndIT() {
-		return endIT;
-	}
-
-	public static string GetOrIT() {
-		return orIT;
-	}
-
-	public static string GetContinueIT() {
-		return continueIT;
-	}
-
-	public static string GetNewGameIT() {
-		return newGameIT;
-	}
-
-	//Pre PT getery
-	public static string GetSavePT() {
-		return savePT;
-	}
-
-	public static string GetEndPT() {
-		return endPT;
-	}
-
-	public static string GetOrPT() {
-		return orPT;
-	}
-
-	public static string GetContinuePT() {
-		return continuePT;
-	}
-
-	public static string GetNewGamePT() {
-		return newGamePT;
-	}
-
-
-	//Pre RU getery
-	public static string GetSaveRU() {
-		return saveRU;
-	}
-
-	public static string GetEndRU() {
-		return endRU;
-	}
-
-	public static string GetOrRU() {
-		return orRU;
-	}
-
-	public static string GetContinueRU() {
-		return continueRU;
-	}
-
-	public static string GetNewGameRU() {
-		return newGameRU;
+	public static string GetNewGame() {
+		switch (EnumLanguagesScript.GetLanguage ()) {
+		case EnumLanguagesScript.Language.ENG:
+			return newGameENG;
+		case EnumLanguagesScript.Language.IT:
+			return newGameIT;
+		case EnumLanguagesScript.Language.ESP:
+			return newGameESP;
+		case EnumLanguagesScript.Language.PT:
+			return newGamePT;
+		case EnumLanguagesScript.Language.RU:
+			return newGameRU;
+		default :
+			return errorENG;
+		}
 	}
 }

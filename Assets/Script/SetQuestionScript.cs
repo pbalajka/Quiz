@@ -3,8 +3,8 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class SetQuestionScript : MonoBehaviour {
-	private string quest1 = "How do you say love in Czech?";
-	private string quest2 = "How do you say joy in Spanish";
+	private string quest1;
+	private string quest2;
 	private string quest3;
 	private string quest4;
 	private string quest5;
@@ -30,8 +30,6 @@ public class SetQuestionScript : MonoBehaviour {
 		quest10 = MultiLanguageQuestScript.Get10Quest ();
 		quest11 = MultiLanguageQuestScript.Get11Quest ();
 		quest12 = MultiLanguageQuestScript.Get12Quest ();
-
-
 
 		SetQuestion ();
 	}
