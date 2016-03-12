@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿/*using UnityEngine;
 using System.Collections;
 
 public class MultiLanguageQuestScript : MonoBehaviour {
@@ -244,3 +244,4 @@ public class MultiLanguageQuestScript : MonoBehaviour {
 		}
 	}
 }
+*/
