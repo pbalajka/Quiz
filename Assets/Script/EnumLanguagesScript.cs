@@ -9,7 +9,7 @@ public class EnumLanguagesScript : MonoBehaviour {
 		return lang;
 	}
 
-	public static void SetLanguage(Language langeage){
-		lang = Language;
+	public static void SetLanguage(Language language){
+		lang = language;
 	}
 }
