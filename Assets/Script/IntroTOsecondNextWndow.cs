@@ -5,7 +5,18 @@ using UnityEngine.SceneManagement;
 public class IntroTOsecondNextWndow : MonoBehaviour {
 
 	void Start () {
+
+		
+		Invoke ("NextLevel", 4);
+
+	}
+	
+	// Update is called once per frame
+	void Update () {
+
+
 		Invoke ("NextLevel", 0);
+
 	}
 
 	void NextLevel() {
