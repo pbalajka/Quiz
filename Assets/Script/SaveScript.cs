@@ -5,6 +5,7 @@ public class SaveScript : MonoBehaviour {
 
 	public void SaveGame() {
 		PlayerPrefs.SetInt ("question", ActualSceneNunberScript.SceneNumber());
-		print ("Save");
+		PlayerPrefs.SetInt ("wrongIndex", ImageAnswerScript.GetWrongIndex());
+		PlayerPrefs.SetInt ("goodIndex", ImageAnswerScript.GetGoodIndex());
 	}
 }

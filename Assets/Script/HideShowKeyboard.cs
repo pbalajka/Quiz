@@ -9,7 +9,7 @@ public class HideShowKeyboard : MonoBehaviour {
 
 	public void ShowKeyboard() {
 		if (Utils.IsMobil()) {
-			keyboard = TouchScreenKeyboard.Open ("", TouchScreenKeyboardType.Default, false, false, false, false);
+			keyboard = TouchScreenKeyboard.Open ("Input text", TouchScreenKeyboardType.Default, false, false, false, false);
 			ok = true;
 		}
 	}

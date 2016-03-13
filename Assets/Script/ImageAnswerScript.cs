@@ -73,4 +73,20 @@ public class ImageAnswerScript : MonoBehaviour {
 		else
 			LoadCharFromKeyboard.SetWait (false);
 	}
+
+	public static int GetWrongIndex() {
+		return currentIndexWrongSprite;
+	}
+
+	public static int GetGoodIndex() {
+		return currentIndexGoodSprite;
+	}
+
+	public static void SetWrongIndex(int wrongIndex) {
+		currentIndexWrongSprite = wrongIndex;
+	}
+
+	public static void SetGoodIndex(int goodIndex) {
+		currentIndexGoodSprite = goodIndex;
+	}
 }
