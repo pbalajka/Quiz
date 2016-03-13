@@ -11,13 +11,7 @@ public class IntroTOsecondNextWndow : MonoBehaviour {
 
 	}
 	
-	// Update is called once per frame
-	void Update () {
 
-
-		Invoke ("NextLevel", 0);
-
-	}
 
 	void NextLevel() {
 			SceneManager.LoadScene ("screen2", LoadSceneMode.Single);
