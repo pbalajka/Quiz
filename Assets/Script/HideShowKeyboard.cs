@@ -1,15 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;
 
 public class HideShowKeyboard : MonoBehaviour {
 	private TouchScreenKeyboard keyboard;
 	private bool ok = false;
+	public GameObject answerField;
 
 	public void ShowKeyboard() {
-		keyboard = TouchScreenKeyboard.Open ("Input char", TouchScreenKeyboardType.Default, false, false, false, false);
-		ok = true;
-	;
+		if (Utils.IsMobil()) {
+			keyboard = TouchScreenKeyboard.Open ("", TouchScreenKeyboardType.Default, false, false, false, false);
+			ok = true;
+		}
 	}
 
     void OnGUI() {		
@@ -20,15 +21,7 @@ public class HideShowKeyboard : MonoBehaviour {
 			ok = false;
 			string text = keyboard.text;
 			char[] textArray = text.ToCharArray();
-			SetTextScript.SetText(textArray[0]);
+			answerField.GetComponent<SetCorrectLetter> ().IsLetterCorrect (textArray[0]);
 		}
 	}
-
-	/*void NextScene() {
-		string question = "question_";
-		int actualScene = ActualSceneNunberScript.SceneNumber();
-		actualScene = ++actualScene;
-		string scene = question + actualScene.ToString ();
-		SceneManager.LoadScene (scene, LoadSceneMode.Single);
-	}*/
 }

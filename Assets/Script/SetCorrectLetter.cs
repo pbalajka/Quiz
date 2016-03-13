@@ -4,60 +4,67 @@ using UnityEngine.UI;
 
 public class SetCorrectLetter : MonoBehaviour {
 	private static Text textField;
-	private string answer;
+	private string answer = "";
+	private char underscoreSymbol = '_';
+	public  GameObject answerImage;
+	private int correctAnswer = 0;
 	// Use this for initialization
 	void Start () {
 		textField = GetComponent<Text> ();
+		answer = LanguageAnswerScritp.GetAnswer (ActualSceneNunberScript.SceneNumber ());
+		SetUnderscore ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		
 	}
 
-	public static void SetText(char inputChar) {
-		textField.text += inputChar.ToString();
-	}
+	private void SetUnderscore() {
+		int count = answer.Length;
 
-	private void LoadAnswer() {
-		switch(ActualSceneNunberScript.SceneNumber ()) {
-		case 1:
-			answer = LanguageAnswerScritp.Get1Answer();
-			break;
-		case 2:
-			answer = LanguageAnswerScritp.Get2Answer();
-			break;
-		case 3:
-			answer = LanguageAnswerScritp.Get3Answer();
-			break;
-		case 4:
-			answer = LanguageAnswerScritp.Get4Answer();
-			break;
-		case 5:
-			answer = LanguageAnswerScritp.Get5Answer();
-			break;
-		case 6:
-			answer = LanguageAnswerScritp.Get6Answer();
-			break;
-		case 7:
-			answer = LanguageAnswerScritp.Get7Answer();
-			break;
-		case 8:
-			answer = LanguageAnswerScritp.Get8Answer();
-			break;
-		case 9:
-			answer= LanguageAnswerScritp.Get9Answer();
-			break;
-		case 10:
-			answer = LanguageAnswerScritp.Get10Answer();
-			break;
-		case 11:
-			answer = LanguageAnswerScritp.Get11Answer();
-			break;
-		case 12:
-			answer = LanguageAnswerScritp.Get12Answer();
-			break;
+		if (count == 0)
+			return;
+		
+		string underscoreAnswer = "";
+		for (int i = 0; i < count; i++) {
+			underscoreAnswer += underscoreSymbol.ToString() + " ";
 		}
-	
+		if (underscoreAnswer.Length > 0)
+			underscoreAnswer = underscoreAnswer.Remove (underscoreAnswer.Length - 1);
+		
+		textField.text = underscoreAnswer;
+	}
+
+	public void IsLetterCorrect(char inputChar) {
+		if (!answer.Contains (inputChar.ToString ())) {
+			answerImage.GetComponent<ImageAnswerScript> ().ShowImageWrong ();
+		}
+
+		string newTextField = "";
+		char[] oldTextField = textField.text.ToCharArray();
+		char[] charAnswer = answer.ToCharArray ();
+		for (int i = 0; i < answer.Length; i++) {
+			if (inputChar == charAnswer [i]) {
+				newTextField += charAnswer [i].ToString () + " ";
+				correctAnswer += 1;
+			} else {
+				if (oldTextField [i * 2] == underscoreSymbol)
+					newTextField += underscoreSymbol.ToString () + " ";
+				else
+					newTextField += oldTextField [i * 2].ToString() + " "; 
+			}
+		}
+
+		newTextField = newTextField.Remove (newTextField.Length - 1);
+		textField.text = newTextField;
+
+		CheckEndAnswer ();
+	}
+
+	private void CheckEndAnswer() {
+		if (correctAnswer == answer.Length) {
+			answerImage.GetComponent<ImageAnswerScript> ().ShowImageGood ();
+		}
 	}
 }

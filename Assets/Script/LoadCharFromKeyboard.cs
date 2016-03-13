@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class LoadCharFromKeyboard : MonoBehaviour {
-
+	public GameObject answerField;
 	// Use this for initialization
 	void Start () {
 	
@@ -12,9 +12,9 @@ public class LoadCharFromKeyboard : MonoBehaviour {
 	void Update () {
 		if (Utils.IsMobil ())
 			return;
-		
+	
 		foreach(char c in Input.inputString) {
-			print (c);
+			answerField.GetComponent<SetCorrectLetter> ().IsLetterCorrect (c);
 		}
 	}
 }
