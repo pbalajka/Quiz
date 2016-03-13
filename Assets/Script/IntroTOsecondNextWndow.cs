@@ -7,7 +7,7 @@ public class IntroTOsecondNextWndow : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
-		Invoke ("NextLevel", 0);
+		Invoke ("NextLevel", 4);
 
 	}
 	
