@@ -15,8 +15,7 @@ public class ImageAnswerScript : MonoBehaviour {
 	void Start () {
 		image = GetComponent<Image> ();
 	}
-
-
+		
 	private void ShowWrongImage(){
 		if (currentIndexWrongSprite >= obrWrong.Length)
 			currentIndexWrongSprite = 0;
@@ -36,14 +35,17 @@ public class ImageAnswerScript : MonoBehaviour {
 	private void HideImage() {
 		image.color = transparent;
 		image.raycastTarget = false;
+		UnlockKey ();
 	}
 
 	private void HideImageAndNextScene(){
 		HideImage ();
+		UnlockKey ();
 		LoadNewScene.NextScene ();
 	}
 
 	public void ShowImageWrong() {
+		LockKey ();
 		ShowWrongImage ();
 		image.color = noTransparent;
 		image.raycastTarget = true;
@@ -51,9 +53,24 @@ public class ImageAnswerScript : MonoBehaviour {
 	}
 
 	public void ShowImageGood() {
+		LockKey ();
 		ShowGoodImage ();
 		image.color = noTransparent;
 		image.raycastTarget = true;
 		Invoke ("HideImageAndNextScene", 3);
+	}
+
+	private void LockKey(){
+		if(Utils.IsMobil())
+			HideShowKeyboard.SetWait (true);
+		else
+			LoadCharFromKeyboard.SetWait (true);
+	}
+
+	private void UnlockKey(){
+		if(Utils.IsMobil())
+			HideShowKeyboard.SetWait (false);
+		else
+			LoadCharFromKeyboard.SetWait (false);
 	}
 }
