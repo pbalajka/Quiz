@@ -3,80 +3,49 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class SetQuestionScript : MonoBehaviour {
-	private string quest1;
-	private string quest2;
-	private string quest3;
-	private string quest4;
-	private string quest5;
-	private string quest6;
-	private string quest7;
-	private string quest8;
-	private string quest9;
-	private string quest10;
-	private string quest11;
-	private string quest12;
 
-	// Use this for initialization
 	void Start () {
-		quest1 = MultiLanguageQuestScript.Get1Quest ();
-		quest2 = MultiLanguageQuestScript.Get2Quest ();
-		quest3 = MultiLanguageQuestScript.Get3Quest ();
-		quest4 = MultiLanguageQuestScript.Get4Quest ();
-		quest5 = MultiLanguageQuestScript.Get5Quest ();
-		quest6 = MultiLanguageQuestScript.Get6Quest ();
-		quest7 = MultiLanguageQuestScript.Get7Quest ();
-		quest8 = MultiLanguageQuestScript.Get8Quest ();
-		quest9 = MultiLanguageQuestScript.Get9Quest ();
-		quest10 = MultiLanguageQuestScript.Get10Quest ();
-		quest11 = MultiLanguageQuestScript.Get11Quest ();
-		quest12 = MultiLanguageQuestScript.Get12Quest ();
-
 		SetQuestion ();
 	}
 
 	private void SetQuestion() {
 		switch(ActualSceneNunberScript.SceneNumber ()) {
 		case 1:
-			GetComponent<Text>().text = quest1;
+			GetComponent<Text>().text = MultiLanguageQuestScript.Get1Quest ();
 			break;
 		case 2:
-			GetComponent<Text>().text = quest2;
+			GetComponent<Text>().text = MultiLanguageQuestScript.Get2Quest ();
 			break;
 		case 3:
-			GetComponent<Text>().text = quest3;
+			GetComponent<Text>().text = MultiLanguageQuestScript.Get3Quest ();
 			break;
 		case 4:
-			GetComponent<Text>().text = quest4;
+			GetComponent<Text>().text = MultiLanguageQuestScript.Get4Quest ();
 			break;
 		case 5:
-			GetComponent<Text>().text = quest5;
+			GetComponent<Text>().text = MultiLanguageQuestScript.Get5Quest ();
 			break;
 		case 6:
-			GetComponent<Text>().text = quest6;
+			GetComponent<Text>().text = MultiLanguageQuestScript.Get16uest ();
 			break;
 		case 7:
-			GetComponent<Text>().text = quest7;
+			GetComponent<Text>().text = MultiLanguageQuestScript.Get7Quest ();
 			break;
 		case 8:
-			GetComponent<Text>().text = quest8;
+			GetComponent<Text>().text = MultiLanguageQuestScript.Get8Quest ();
 			break;
 		case 9:
-			GetComponent<Text>().text = quest9;
+			GetComponent<Text>().text = MultiLanguageQuestScript.Get9Quest ();
 			break;
 		case 10:
-			GetComponent<Text>().text = quest10;
+			GetComponent<Text>().text = MultiLanguageQuestScript.Get10Quest ();
 			break;
 		case 11:
-			GetComponent<Text>().text = quest11;
+			GetComponent<Text>().text = MultiLanguageQuestScript.Get11Quest ();
 			break;
 		case 12:
-			GetComponent<Text>().text = quest12;
+			GetComponent<Text>().text = MultiLanguageQuestScript.Get12Quest ();
 			break;
 		}
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 }
