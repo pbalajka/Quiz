@@ -3,45 +3,45 @@ using System.Collections;
 
 public class LanguageLabelScript : MonoBehaviour {
 	//Anglicke texty k tlacidlam a popisom
-	private static string saveENG = "Save";
-	private static string endENG = "End";
+	private static string saveENG = "SAVE";
+	private static string endENG = "END";
 	private static string orENG = "or";
 	private static string continueENG = "CONTINUE";
 	private static string newGameENG = "START NEW";
-	private static string languageENG = "LANGUAGE";
+	private static string languageENG = "language";
 	private static string questionENG = "Question";
 	//Talianske texty k tlacidlam a popisom
-	private static string saveIT="itali";
-	private static string endIT="itali";
-	private static string orIT="itali";
-	private static string continueIT="itali";
-	private static string newGameIT="itali";
-	private static string languageIT = "itali";
-	private static string questionIT = "itali";
+	private static string saveIT="SALVA";
+	private static string endIT="ALLA FINE";
+	private static string orIT="o";
+	private static string continueIT="CONTINUANO";
+	private static string newGameIT="AVVIARE NUOVE";
+	private static string languageIT = "lingua";
+	private static string questionIT = "Domanda";
 	//Portugalske texty k tlacidlam a popisom
-	private static string savePT;
-	private static string endPT;
-	private static string orPT;
-	private static string continuePT;
-	private static string newGamePT;
-	private static string languagePT = "Language";
-	private static string questionPT = "Question";
+	private static string savePT="SALVAR";
+	private static string endPT="FINALIZAR";
+	private static string orPT="ou";
+	private static string continuePT="CONTINUAR";
+	private static string newGamePT="INICIAR NOVO";
+	private static string languagePT = "língua";
+	private static string questionPT = "Pergunta";
 	//Spanielske texty k tlacidlam a popipublic string SaveENG {
-	private static string saveESP;
-	private static string endESP;
-	private static string orESP;
-	private static string continueESP;
-	private static string newGameESP;
-	private static string languageESP = "Language";
-	private static string questionESP = "Question";
+	private static string saveESP="GUARDAR";
+	private static string endESP="TERMINAR";
+	private static string orESP="o";
+	private static string continueESP="CONTINÚE";
+	private static string newGameESP="INICIAR NUEVA";
+	private static string languageESP = "lenguaje";
+	private static string questionESP = "Pregunta";
 	//Rustina texty k tlacidlam a popisom
-	private static string saveRU;
-	private static string endRU;
-	private static string orRU;
-	private static string continueRU;
-	private static string newGameRU;
-	private static string languageRU = "Language";
-	private static string questionRU = "Question";
+	private static string saveRU="СОХРАНИТЬ";
+	private static string endRU="КОНЕЦ";
+	private static string orRU="или";
+	private static string continueRU="ПРОДОЛЖАТЬ";
+	private static string newGameRU="НАЧАЛА НОВОГО";
+	private static string languageRU = "Язык";
+	private static string questionRU = "Вопрос";
 	//Error ENG string
 	private static string errorENG = "Error";
 

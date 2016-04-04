@@ -36,7 +36,7 @@ public class MultiLanguageQuestScript : MonoBehaviour {
 	private static string quest5ESP ="¿Cómo se dice la  esperanza en ruso?";
 	private static string quest6ESP ="¿Cómo se dice la estética en francés ?";
 	private static string quest7ESP ="¿Cómo se dice bello en inglés ?";
-	private static string quest8ESP ="¿Cómo se dice te amo  en español ?";
+	private static string quest8ESP ="¿Cómo se dice te amo  en eslovaco ?";
 	private static string quest9ESP ="¿Cómo se dice me  quiero en  italiano?";
 	private static string quest10ESP ="¿Cómo se dice te quiero en portugués ?";
 	private static string quest11ESP ="¿Cómo se dice   el  Dios en  ruso?";
@@ -55,18 +55,18 @@ public class MultiLanguageQuestScript : MonoBehaviour {
 	private static string quest11PT ="Como você diz Deus em russo ?";
 	private static string quest12PT ="Como você diz o Criador em Eslovaco?";
 	//Ruske otazky
-	private static string quest1RU ="kakti1";
-	private static string quest2RU ="kakti1";
-	private static string quest3RU ="kakti1";
-	private static string quest4RU ="kakti1";
-	private static string quest5RU ="kakti1";
-	private static string quest6RU ="kakti1";
-	private static string quest7RU ="kakti1";
-	private static string quest8RU ="kakti1";
-	private static string quest9RU ="kakti1";
-	private static string quest10RU ="kakti1";
-	private static string quest11RU ="kakti1";
-	private static string quest12RU ="kakti1";
+	private static string quest1RU ="Как скажeтcя, любви на английском языке ?";
+	private static string quest2RU ="Как скажeтcя, удовольствие на испанском языке ?";
+	private static string quest3RU ="Как скажeтcя, удачи на итальянском языке ?";
+	private static string quest4RU ="Как скажeтcя, красоту на португальском языке ?";
+	private static string quest5RU ="Как скажeтcя, надеюсь, словацкий язык ?";
+	private static string quest6RU ="Как скажeтcя, эстетика на французском языке?";
+	private static string quest7RU ="Как скажeтcя, хороший на английскoм языкe ?";
+	private static string quest8RU ="Как скажeтcя, я тебя люблю говорить на испанском языке?";
+	private static string quest9RU ="Как скажeтcя, что я люблю себя по-итальянски?";
+	private static string quest10RU ="Как скажeтcя, люблю тебя на португальском языке?";
+	private static string quest11RU ="Как скажeтcя, бог на чешскoм языкe ?";
+	private static string quest12RU ="Как скажeтcя, творца на словацкoм языкe ?";
 
 	//Error
 	private static string errorENG = "Error, do not load message";
