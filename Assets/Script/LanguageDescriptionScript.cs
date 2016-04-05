@@ -13,7 +13,7 @@ public class LanguageDescriptionScript : MonoBehaviour {
 	public static string GetDescription() {
 		switch (EnumLanguagesScript.GetLanguage ()) {
 		case EnumLanguagesScript.Language.ENG:
-			return descriptionENG; // -1 kvoli tomu ze pole je cislovane od 0 a odpovede od 1
+			return descriptionENG;
 		case EnumLanguagesScript.Language.IT:
 			return descriptionIT;
 		case EnumLanguagesScript.Language.ESP:
