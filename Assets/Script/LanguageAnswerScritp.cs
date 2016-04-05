@@ -3,16 +3,16 @@ using System.Collections;
 
 public class LanguageAnswerScritp : MonoBehaviour {
 	//Anglictina odpovede chybaju dve odpovede
-	private static string[] answerENG = {"laska","placer", "felicità", "beleza", "nadejus", "esthetique", "pekny", "te amo", "amo il", "eu te amo", "bog", "stvoritel" };
+	private static string[] answerENG = {"laska","placer", "felicita", "beleza", "nadejus", "esthetique", "pekny", "te amo", "amo il", "eu te amo", "bog", "stvoritel" };
 
 	//Talianske odpovede
 	private static string[] answerIT= {"love","placer", "stesti", "beleza", "nadejus", "esthetique", "pekny", "te amo", "lubim sa", "eu te amo", "bog", "stvoritel" };
 
 	//Spanielske odpovede
-	private static string[] answerESP = {"love","placer", "felicità", "beleza", "nadejus", "esthetique", "nice", "milujem sa", "amo il", "te amo", "bog", "stvoritel" };
+	private static string[] answerESP = {"love","placer", "felicita", "beleza", "nadejus", "esthetique", "nice", "milujem sa", "amo il", "te amo", "bog", "stvoritel" };
 
 	//Portugalske odpovede
-	private static string[] answerPT = {"love","placer", "felicità", "krasa", "nadejus", "esthetique", "nice", "te amo", "amo il", "lubim ta", "bog", "stvoritel" };
+	private static string[] answerPT = {"love","placer", "felicita", "krasa", "nadejus", "esthetique", "nice", "te amo", "amo il", "lubim ta", "bog", "stvoritel" };
 
 	//Ruske odpovede
 	private static string[] answerRU = {"ласка","плaцeр", "фeлицитa", "бeлeзa", "нaдeй", "ecтeтик", "ницe", "тэ амo", "amo ил", "eу тe aмo", "бог", "cтвopитeл" };

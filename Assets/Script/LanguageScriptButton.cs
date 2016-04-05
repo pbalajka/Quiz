@@ -3,35 +3,35 @@ using System.Collections;
 
 public class LanguageScriptButton : MonoBehaviour {
 	//ENG button
-	private static string engENG;
-	private static string engIT;
-	private static string engESP;
-	private static string engPT;
-	private static string engRU;
+	private static string engENG="english";
+	private static string engIT="italian";
+	private static string engESP="spanish";
+	private static string engPT="portuguese";
+	private static string engRU="russian";
 	//IT button
-	private static string itENG;
-	private static string itIT;
-	private static string itESP;
-	private static string itPT;
-	private static string itRU;
+	private static string itENG="inglese";
+	private static string itIT="italiano";
+	private static string itESP="spagnolo";
+	private static string itPT="portoghese";
+	private static string itRU="russo";
 	//ESP button
-	private static string espENG;
-	private static string espIT;
-	private static string espESP;
-	private static string espPT;
-	private static string espRU;
+	private static string espENG="inglés";
+	private static string espIT="italiano";
+	private static string espESP="español";
+	private static string espPT="portugués";
+	private static string espRU="ruso";
 	//PT
-	private static string ptENG;
-	private static string ptIT;
-	private static string ptESP;
-	private static string ptPT;
-	private static string ptRU;
+	private static string ptENG="inglés";
+	private static string ptIT="italiano";
+	private static string ptESP="español";
+	private static string ptPT="portugués";
+	private static string ptRU="ruso";
 	//RU
-	private static string ruENG;
-	private static string ruIT;
-	private static string ruESP;
-	private static string ruPT;
-	private static string ruRU;
+	private static string ruENG="английский";
+	private static string ruIT="итальянский";
+	private static string ruESP="испанский";
+	private static string ruPT="португальский";
+	private static string ruRU="русский";
 	//Error
 
 	private static string errorENG = "Error";
@@ -42,13 +42,13 @@ public class LanguageScriptButton : MonoBehaviour {
 		case EnumLanguagesScript.Language.ENG:
 			return engENG; 
 		case EnumLanguagesScript.Language.IT:
-			return engIT;
+			return itENG;
 		case EnumLanguagesScript.Language.ESP:
-			return engESP;
+			return espENG;
 		case EnumLanguagesScript.Language.PT:
-			return engPT;
+			return ptENG;
 		case EnumLanguagesScript.Language.RU:
-			return engRU;
+			return ruENG;
 		default :
 			return errorENG;
 		}
@@ -57,15 +57,15 @@ public class LanguageScriptButton : MonoBehaviour {
 	public static string GetItButton() {
 		switch (EnumLanguagesScript.GetLanguage ()) {
 		case EnumLanguagesScript.Language.ENG:
-			return itENG; 
+			return engIT; 
 		case EnumLanguagesScript.Language.IT:
 			return itIT;
 		case EnumLanguagesScript.Language.ESP:
-			return itESP;
+			return espIT;
 		case EnumLanguagesScript.Language.PT:
-			return itPT;
+			return ptIT;
 		case EnumLanguagesScript.Language.RU:
-			return itRU;
+			return ruIT;
 		default :
 			return errorENG;
 		}
@@ -74,15 +74,15 @@ public class LanguageScriptButton : MonoBehaviour {
 	public static string GetEspButton() {
 		switch (EnumLanguagesScript.GetLanguage ()) {
 		case EnumLanguagesScript.Language.ENG:
-			return espENG; 
+			return engESP; 
 		case EnumLanguagesScript.Language.IT:
-			return espIT;
+			return itESP;
 		case EnumLanguagesScript.Language.ESP:
 			return espESP;
 		case EnumLanguagesScript.Language.PT:
-			return espPT;
+			return ptESP;
 		case EnumLanguagesScript.Language.RU:
-			return espRU;
+			return ruESP;
 		default :
 			return errorENG;
 		}
@@ -91,15 +91,15 @@ public class LanguageScriptButton : MonoBehaviour {
 	public static string GetPtButton() {
 		switch (EnumLanguagesScript.GetLanguage ()) {
 		case EnumLanguagesScript.Language.ENG:
-			return ptENG; 
+			return engPT; 
 		case EnumLanguagesScript.Language.IT:
-			return ptIT;
+			return itPT;
 		case EnumLanguagesScript.Language.ESP:
-			return ptESP;
+			return espPT;
 		case EnumLanguagesScript.Language.PT:
 			return ptPT;
 		case EnumLanguagesScript.Language.RU:
-			return ptRU;
+			return ruPT;
 		default :
 			return errorENG;
 		}
@@ -108,13 +108,13 @@ public class LanguageScriptButton : MonoBehaviour {
 	public static string GetRuButton() {
 		switch (EnumLanguagesScript.GetLanguage ()) {
 		case EnumLanguagesScript.Language.ENG:
-			return ruENG; 
+			return engRU; 
 		case EnumLanguagesScript.Language.IT:
-			return ruIT;
+			return itRU;
 		case EnumLanguagesScript.Language.ESP:
-			return ruESP;
+			return espRU;
 		case EnumLanguagesScript.Language.PT:
-			return ruPT;
+			return ptRU;
 		case EnumLanguagesScript.Language.RU:
 			return ruRU;
 		default :
