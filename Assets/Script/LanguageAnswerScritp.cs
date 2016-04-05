@@ -4,8 +4,7 @@ using System.Collections;
 public class LanguageAnswerScritp : MonoBehaviour {
 	//Anglictina odpovede chybaju dve odpovede
 	private static string[] answerENG = {"laska","placer", "felicità", "beleza", "nadejus", "esthetique", "pekny", "te amo", "amo il", "eu te amo", "bog", "stvoritel" };
-	private static string answer11ENG = "";
-	private static string answer12ENG = "";
+
 	//Talianske odpovede
 	private static string[] answerIT= {"love","placer", "stesti", "beleza", "nadejus", "esthetique", "pekny", "te amo", "lubim sa", "eu te amo", "bog", "stvoritel" };
 
@@ -25,13 +24,13 @@ public class LanguageAnswerScritp : MonoBehaviour {
 		case EnumLanguagesScript.Language.ENG:
 			return answerENG[answerNunber - 1]; // -1 kvoli tomu ze pole je cislovane od 0 a odpovede od 1
 		case EnumLanguagesScript.Language.IT:
-			return answerIT[answerNunber - 1];;
+			return answerIT[answerNunber - 1];
 		case EnumLanguagesScript.Language.ESP:
-			return answerESP[answerNunber - 1];;
+			return answerESP[answerNunber - 1];
 		case EnumLanguagesScript.Language.PT:
-			return answerPT[answerNunber - 1];;
+			return answerPT[answerNunber - 1];
 		case EnumLanguagesScript.Language.RU:
-			return answerRU[answerNunber - 1];;
+			return answerRU[answerNunber - 1];
 		default :
 			return errorENG;
 		}
