@@ -8,15 +8,15 @@ public class LanguageLabelScript : MonoBehaviour {
 	private static string orENG = "or";
 	private static string continueENG = "CONTINUE";
 	private static string newGameENG = "START NEW";
-	private static string languageENG = "language";
+	private static string languageENG = "language settings";
 	private static string questionENG = "Question";
 	//Talianske texty k tlacidlam a popisom
 	private static string saveIT="SALVA";
 	private static string endIT="ALLA FINE";
 	private static string orIT="o";
-	private static string continueIT="CONTINUANO";
+	private static string continueIT="CONTINUARE";
 	private static string newGameIT="AVVIARE NUOVE";
-	private static string languageIT = "lingua";
+	private static string languageIT = "impostazioni della lingua";
 	private static string questionIT = "Domanda";
 	//Portugalske texty k tlacidlam a popisom
 	private static string savePT="SALVAR";
@@ -24,15 +24,15 @@ public class LanguageLabelScript : MonoBehaviour {
 	private static string orPT="ou";
 	private static string continuePT="CONTINUAR";
 	private static string newGamePT="INICIAR NOVO";
-	private static string languagePT = "língua";
+	private static string languagePT = "configurações de idioma";
 	private static string questionPT = "Pergunta";
 	//Spanielske texty k tlacidlam a popipublic string SaveENG {
 	private static string saveESP="GUARDAR";
 	private static string endESP="TERMINAR";
 	private static string orESP="o";
-	private static string continueESP="CONTINÚE";
+	private static string continueESP="CONTINUARE";
 	private static string newGameESP="INICIAR NUEVA";
-	private static string languageESP = "lenguaje";
+	private static string languageESP = "configuración de idioma";
 	private static string questionESP = "Pregunta";
 	//Rustina texty k tlacidlam a popisom
 	private static string saveRU="СОХРАНИТЬ";
@@ -40,7 +40,7 @@ public class LanguageLabelScript : MonoBehaviour {
 	private static string orRU="или";
 	private static string continueRU="ПРОДОЛЖАТЬ";
 	private static string newGameRU="НАЧАЛА НОВОГО";
-	private static string languageRU = "Язык";
+	private static string languageRU = "настройки языкa";
 	private static string questionRU = "Вопрос";
 	//Error ENG string
 	private static string errorENG = "Error";

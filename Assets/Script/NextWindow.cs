@@ -8,5 +8,6 @@ public class NextWindow : MonoBehaviour {
 	public void NextWin(){
 		SceneManager.LoadScene ("Description", LoadSceneMode.Single);
 		print ("invoke Description");
+
 	}
 }
