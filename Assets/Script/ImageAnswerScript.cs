@@ -10,6 +10,8 @@ public class ImageAnswerScript : MonoBehaviour {
 	private static int currentIndexGoodSprite = 0;
 	private Color32 transparent = new Color32(255,255,255,0);
 	private Color32 noTransparent = new Color32(255,255,255,255);
+	public GameObject bublePersonGoodObj;
+	public GameObject bublePersonBadObj;
 
 	// Use this for initialization
 	void Start () {
@@ -46,13 +48,27 @@ public class ImageAnswerScript : MonoBehaviour {
 
 	public void ShowImageWrong() {
 		LockKey ();
+		ShowPersonBad ();
+		Invoke ("DissablePersonBad", 4);
+		Invoke ("ShowImageWrongAfterPerson", 4);
+	}
+
+	private void ShowImageWrongAfterPerson(){
+		LockKey ();
 		ShowWrongImage ();
 		image.color = noTransparent;
 		image.raycastTarget = true;
 		Invoke ("HideImage", 3);
 	}
 
+
 	public void ShowImageGood() {
+		LockKey ();
+		ShowPersonGood ();
+		Invoke ("DissablePersonGood", 4);
+		Invoke ("ShowImageGoodAfterPerson", 4);
+	}
+	private void ShowImageGoodAfterPerson(){
 		LockKey ();
 		ShowGoodImage ();
 		image.color = noTransparent;
@@ -88,5 +104,20 @@ public class ImageAnswerScript : MonoBehaviour {
 
 	public static void SetGoodIndex(int goodIndex) {
 		currentIndexGoodSprite = goodIndex;
+	}
+
+	private void ShowPersonGood(){
+		bublePersonGoodObj.SetActive (true);
+	}
+
+	private void DissablePersonGood(){
+		bublePersonGoodObj.SetActive (false);
+	}
+	private void ShowPersonBad(){
+		bublePersonBadObj.SetActive (true);
+	}
+
+	private void DissablePersonBad(){
+		bublePersonBadObj.SetActive (false);
 	}
 }
