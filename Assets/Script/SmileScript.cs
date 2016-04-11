@@ -8,15 +8,12 @@ public class SmileScript : MonoBehaviour {
 	public Image imageAfterAnswer;
 	public Text text;
 	private Image image;
-	private static int currIndexGoodText = 0;
-	private static int currIndexBadText = 0;
+	private static int currIndexGoodText = 1;
+	private static int currIndexBadText = 1;
 
-	void Start() {
-		image = GetComponent<Image> ();
-	}
 
 	public void ShowGoodSmile() {
-		if (currIndexGoodText >= 5)
+		if (currIndexGoodText >= LanguageForSmile.GetCountGoodAnswer())
 			currIndexGoodText = 0;
 
 		text.text = LanguageForSmile.GetGoodAnswer (currIndexGoodText);
@@ -26,7 +23,7 @@ public class SmileScript : MonoBehaviour {
 	}
 
 	public void ShowBadSmile() {
-		if (currIndexGoodText >= 5)
+		if (currIndexGoodText >= LanguageForSmile.GetCountBadAnswer())
 			currIndexGoodText = 0;
 
 		text.text = LanguageForSmile.GetGoodAnswer (currIndexBadText);
@@ -36,19 +33,22 @@ public class SmileScript : MonoBehaviour {
 	}
 
 	private void ShowGoodSmileImage() {
-		image.sprite = goodSmile;
-		gameObject.SetActive(true);
+		ShowImage ();
+		GetComponent<Image> ().sprite = goodSmile;
 	}
 
 	private void ShowBadSmileImage() {
-		image.sprite = badSmile;
-		gameObject.SetActive(true);
+		ShowImage ();
+		GetComponent<Image> ().sprite = badSmile;
 	}
 
 	private void HideSmile() {
 		gameObject.SetActive (false);
 	}
 
+	private void ShowImage() {
+		gameObject.SetActive(true);
+	}
 	private void ShowBadPicture() {
 		imageAfterAnswer.GetComponent<ImageAnswerScript> ().ShowImageWrongAfterPerson ();
 		HideSmile ();

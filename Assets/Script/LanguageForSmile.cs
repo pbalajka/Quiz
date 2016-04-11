@@ -53,4 +53,12 @@ public class LanguageForSmile : MonoBehaviour {
 			return errorENG;
 		}
 	}
+
+	public static int GetCountGoodAnswer() {
+		return goodENG.Length;
+	}
+
+	public static int GetCountBadAnswer() {
+		return badENG.Length;
+	}
 }
