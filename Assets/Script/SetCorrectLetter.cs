@@ -7,17 +7,13 @@ public class SetCorrectLetter : MonoBehaviour {
 	private string answer = "";
 	private char underscoreSymbol = '_';
 	public  GameObject answerImage;
+	public  GameObject afterGoodWord;
 	private int correctAnswer = 0;
 	// Use this for initialization
 	void Start () {
 		textField = GetComponent<Text> ();
 		answer = LanguageAnswerScritp.GetAnswer (ActualSceneNunberScript.SceneNumber ());
 		SetUnderscore ();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 
 	private void SetUnderscore() {
@@ -38,8 +34,9 @@ public class SetCorrectLetter : MonoBehaviour {
 
 	public void IsLetterCorrect(char inputChar) {
 		if (!answer.Contains (inputChar.ToString ())) {
-			//Tu pôjde zavolanie postavicky
-			//answerImage.GetComponent<ImageAnswerScript> ().ShowImageWrong ();
+			answerImage.GetComponent<SmileScript> ().ShowBadSmile ();
+		} else {
+			answerImage.GetComponent<SmileScript> ().ShowGoodSmile ();
 		}
 
 		string newTextField = "";
@@ -65,7 +62,7 @@ public class SetCorrectLetter : MonoBehaviour {
 
 	private void CheckEndAnswer() {
 		if (correctAnswer == answer.Length) {
-			answerImage.GetComponent<ImageAnswerScript> ().ShowImageGood ();
+			afterGoodWord.GetComponent<ImageAnswerScript> ().ShowImageGood ();
 		}
 	}
 }
