@@ -57,6 +57,7 @@ public class ImageAnswerScript : MonoBehaviour {
 		LockKey ();
 		Invoke ("ShowImageGoodAfterPerson", 4);
 	}
+
 	private void ShowImageGoodAfterPerson(){
 		LockKey ();
 		ShowGoodImage ();
