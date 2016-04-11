@@ -38,7 +38,8 @@ public class SetCorrectLetter : MonoBehaviour {
 
 	public void IsLetterCorrect(char inputChar) {
 		if (!answer.Contains (inputChar.ToString ())) {
-			answerImage.GetComponent<ImageAnswerScript> ().ShowImageWrong ();
+			//Tu pôjde zavolanie postavicky
+			//answerImage.GetComponent<ImageAnswerScript> ().ShowImageWrong ();
 		}
 
 		string newTextField = "";
