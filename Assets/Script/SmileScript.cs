@@ -28,7 +28,7 @@ public class SmileScript : MonoBehaviour {
 
 		text.text = LanguageForSmile.GetBadAnswer (currIndexBadText);
 		ShowBadSmileImage ();
-		currIndexGoodText = ++currIndexGoodText; 
+		currIndexGoodText = ++currIndexBadText; 
 		Invoke ("ShowBadPicture", 4);
 	}
 
