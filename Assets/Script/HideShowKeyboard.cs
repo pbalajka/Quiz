@@ -9,7 +9,7 @@ public class HideShowKeyboard : MonoBehaviour {
 
 	public void ShowKeyboard() {
 		if (Utils.IsMobil()) {
-			keyboard = TouchScreenKeyboard.Open ("Input text", TouchScreenKeyboardType.Default, false, false, false, false);
+			keyboard = TouchScreenKeyboard.Open ("", TouchScreenKeyboardType.Default, false, false, false, false);
 			ok = true;
 		}
 	}
@@ -22,10 +22,15 @@ public class HideShowKeyboard : MonoBehaviour {
 			return;
 		
 		if (keyboard != null && keyboard.done && ok) {
-			ok = false;
 			string text = keyboard.text;
-			char[] textArray = text.ToCharArray();
-			answerField.GetComponent<SetCorrectLetter> ().IsLetterCorrect (textArray[0]);
+			if (answerField.GetComponent<SetCorrectLetter>().IsWordCorrecrt(text)) {
+
+			} else {
+				char[] textArray = text.ToCharArray ();
+				answerField.GetComponent<SetCorrectLetter> ().IsLetterCorrect (textArray [0]);
+			}
+
+			ok = false;
 		}
 	}
 

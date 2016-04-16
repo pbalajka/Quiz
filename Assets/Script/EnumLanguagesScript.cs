@@ -11,5 +11,6 @@ public class EnumLanguagesScript : MonoBehaviour {
 
 	public static void SetLanguage(Language language){
 		lang = language;
+		PlayerPrefs.SetString ("language", GetLanguage ().ToString());
 	}
 }

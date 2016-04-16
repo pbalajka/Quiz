@@ -23,15 +23,15 @@ public class LanguageForSmile : MonoBehaviour {
 	public static string GetGoodAnswer(int answerNunber) {
 		switch (EnumLanguagesScript.GetLanguage ()) {
 		case EnumLanguagesScript.Language.ENG:
-			return goodENG[answerNunber - 1]; // -1 kvoli tomu ze pole je cislovane od 0 a odpovede od 1
+			return goodENG[answerNunber]; 
 		case EnumLanguagesScript.Language.IT:
-			return goodIT[answerNunber - 1];
+			return goodIT[answerNunber];
 		case EnumLanguagesScript.Language.ESP:
-			return goodESP[answerNunber - 1];
+			return goodESP[answerNunber];
 		case EnumLanguagesScript.Language.PT:
-			return goodPT[answerNunber - 1];
+			return goodPT[answerNunber];
 		case EnumLanguagesScript.Language.RU:
-			return goodRU[answerNunber - 1];
+			return goodRU[answerNunber];
 		default :
 			return errorENG;
 		}
@@ -40,15 +40,15 @@ public class LanguageForSmile : MonoBehaviour {
 	public static string GetBadAnswer(int answerNunber) {
 		switch (EnumLanguagesScript.GetLanguage ()) {
 		case EnumLanguagesScript.Language.ENG:
-			return badENG[answerNunber - 1]; // -1 kvoli tomu ze pole je cislovane od 0 a odpovede od 1
+			return badENG[answerNunber]; // -1 kvoli tomu ze pole je cislovane od 0 a odpovede od 1
 		case EnumLanguagesScript.Language.IT:
-			return badIT[answerNunber - 1];
+			return badIT[answerNunber];
 		case EnumLanguagesScript.Language.ESP:
-			return badESP[answerNunber - 1];
+			return badESP[answerNunber];
 		case EnumLanguagesScript.Language.PT:
-			return badPT[answerNunber - 1];
+			return badPT[answerNunber];
 		case EnumLanguagesScript.Language.RU:
-			return badRU[answerNunber - 1];
+			return badRU[answerNunber];
 		default :
 			return errorENG;
 		}

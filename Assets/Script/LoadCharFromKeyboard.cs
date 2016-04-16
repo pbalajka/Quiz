@@ -25,5 +25,4 @@ public class LoadCharFromKeyboard : MonoBehaviour {
 	public static void SetWait(bool waitValue) {
 		wait = waitValue;
 	}
-
 }

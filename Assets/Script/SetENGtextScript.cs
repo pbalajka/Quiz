@@ -7,5 +7,4 @@ public class SetENGtextScript : MonoBehaviour {
 	void Start () {
 		GetComponent<Text> ().text = LanguageScriptButton.GetEngButton ();
 	}
-	
 }

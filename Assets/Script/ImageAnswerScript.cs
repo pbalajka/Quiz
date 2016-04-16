@@ -35,17 +35,17 @@ public class ImageAnswerScript : MonoBehaviour {
 	private void HideImage() {
 		image.color = transparent;
 		image.raycastTarget = false;
-		UnlockKey ();
+		LockKeyboard.UnlockKey ();
 	}
 
 	private void HideImageAndNextScene(){
 		HideImage ();
-		UnlockKey ();
+		LockKeyboard.UnlockKey ();
 		LoadNewScene.NextScene ();
 	}
 
 	public void ShowImageWrongAfterPerson(){
-		LockKey ();
+		LockKeyboard.LockKey ();
 		ShowWrongImage ();
 		image.color = noTransparent;
 		image.raycastTarget = true;
@@ -54,30 +54,16 @@ public class ImageAnswerScript : MonoBehaviour {
 
 
 	public void ShowImageGood() {
-		LockKey ();
+		LockKeyboard.LockKey ();
 		Invoke ("ShowImageGoodAfterPerson", 4);
 	}
 
 	private void ShowImageGoodAfterPerson(){
-		LockKey ();
+		LockKeyboard.LockKey ();
 		ShowGoodImage ();
 		image.color = noTransparent;
 		image.raycastTarget = true;
 		Invoke ("HideImageAndNextScene", 3);
-	}
-
-	private void LockKey(){
-		if(Utils.IsMobil())
-			HideShowKeyboard.SetWait (true);
-		else
-			LoadCharFromKeyboard.SetWait (true);
-	}
-
-	private void UnlockKey(){
-		if(Utils.IsMobil())
-			HideShowKeyboard.SetWait (false);
-		else
-			LoadCharFromKeyboard.SetWait (false);
 	}
 
 	public static int GetWrongIndex() {

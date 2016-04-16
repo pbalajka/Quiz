@@ -8,8 +8,8 @@ public class SmileScript : MonoBehaviour {
 	public Image imageAfterAnswer;
 	public Text text;
 	private Image image;
-	private static int currIndexGoodText = 1;
-	private static int currIndexBadText = 1;
+	private static int currIndexGoodText = 0;
+	private static int currIndexBadText = 0;
 
 
 	public void ShowGoodSmile() {
@@ -19,7 +19,7 @@ public class SmileScript : MonoBehaviour {
 		text.text = LanguageForSmile.GetGoodAnswer (currIndexGoodText);
 		ShowGoodSmileImage ();
 		currIndexGoodText = ++currIndexGoodText;
-		Invoke ("HideSmile", 4);
+		Invoke ("HideGoodSmile", 4);
 	}
 
 	public void ShowBadSmile() {
@@ -33,16 +33,23 @@ public class SmileScript : MonoBehaviour {
 	}
 
 	private void ShowGoodSmileImage() {
+		LockKeyboard.LockKey ();
 		ShowImage ();
 		GetComponent<Image> ().sprite = goodSmile;
 	}
 
 	private void ShowBadSmileImage() {
+		LockKeyboard.LockKey ();
 		ShowImage ();
 		GetComponent<Image> ().sprite = badSmile;
 	}
 
-	private void HideSmile() {
+	private void HideGoodSmile() {
+		LockKeyboard.UnlockKey ();
+		gameObject.SetActive (false);
+	}
+
+	private void HideBadSmile() {
 		gameObject.SetActive (false);
 	}
 
@@ -51,6 +58,6 @@ public class SmileScript : MonoBehaviour {
 	}
 	private void ShowBadPicture() {
 		imageAfterAnswer.GetComponent<ImageAnswerScript> ().ShowImageWrongAfterPerson ();
-		HideSmile ();
+		HideBadSmile ();
 	}
 }
