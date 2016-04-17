@@ -8,10 +8,10 @@ public class ScrollBarChangeValue : MonoBehaviour {
 	public Text text;
 	public Button butt;
 	public GameObject waterObj;
-
+	public Color disableColor;
 
 	void Start(){
-		
+		disableColor = new Color (1, 16, 255, 50);
 
 	}	
 
@@ -31,7 +31,6 @@ public class ScrollBarChangeValue : MonoBehaviour {
 	void ChangeColorTrue(){
 		if (scrollbar.value == 0f) {
 			butt.interactable = true;
-			text.color = new Color32 (1, 16, 255, 255);
 			InactiveWaterPerson ();
 		} else
 			return;
@@ -41,7 +40,8 @@ public class ScrollBarChangeValue : MonoBehaviour {
 		
 
 		butt.interactable = false;
-		text.color = new Color32 (1, 16, 255, 50);
+	
+
 
 	}
 
