@@ -11,8 +11,8 @@ public class LanguageForSmile : MonoBehaviour {
 	private static string[] goodESP = {"Me alegro de tu destreza.", "Me alegro de tu éxito.", "Me alegro de que te vaya bien.", "Me alegro de que lo hagas bien.","La destreza que vas adquiriendo será muy útil en tu vida.","La paciencia es la corona del éxito."};
 	private static string[] badESP = {"Intenta  adivinar las letras.", "Continúa,  eres capaz de hacerlo con éxito.", "La paciencia es lo que estás aprendiendo.", "El fallo y el error son sólo una forma de aprendizaje.","Eres capaz de hacerlo con éxito, confía en tí mismo.","Se te abre la creatividad.","Eres capaz de  superarlo.","Te ayuda tu destreza."};
 
-	private static string[] goodPT = {"", "", "", "","",""};
-	private static string[] badPT = {"", "", "", "","","","",""};
+	private static string[] goodPT = {"Fico contente da tua habilidade.", "Fico contente do teu sucesso.", "Fico contente que esteja indo tudo bem pra você.", "Fico contente que você faça bem.","A habilidade que você vai adquirindo será muito útil na tua vida.","A paciência é a coroa do sucesso."};
+	private static string[] badPT = {"Tente adivinhar as letras.", "Continue, você é capaz de fazê-lo com sucesso.", "A paciência é o que você esta aprendendo.", "A falha e o erro são apenas uma forma de aprendizagem.","Você é capaz de fazê-lo com sucesso, confie em você mesmo.","Abre-se a criatividade.","Você é capaz de superá-lo","Ajuda-te a tua habilidade."};
 
 	private static string[] goodRU = {"Я радуюсь Твоему мастерству.", "Я радуюсь Твоему успеху.", "Я радуюсь как Тебе все дается.", "Я радуюсь как Ты со всем справляешься.","Мастерство, которому Ты учишься, Тебе в жизни годится.","Терпение завершено успехом."};
 	private static string[] badRU = {"Попробуй угадать буквы.", "Продолжай по-прежнему, ты можешь справиться с этим.", "Терпение - это то, чему ты учишься.", "Ошибки и погрешности - это только способ учения.","Ты можешь справиться с этим, доверяй себе.","Открывается Твое творчество.","Ты способен/cпособна с этим справиться.","Твое мастерство поможет Тебе."};
