@@ -10,7 +10,7 @@ public class LanguageForDrinkWater : MonoBehaviour {
 
 	private static string errorENG = "Error";
 
-	public static string GetGoodAnswer(int drinkText) {
+	public static string GetDrinkAnswer(int drinkText) {
 		switch (EnumLanguagesScript.GetLanguage ()) {
 		case EnumLanguagesScript.Language.ENG:
 			return drinkENG [drinkText]; 
