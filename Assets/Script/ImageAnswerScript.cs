@@ -18,10 +18,26 @@ public class ImageAnswerScript : MonoBehaviour {
 		
 	private void ShowWrongImage(){
 		if (currentIndexWrongSprite >= obrWrong.Length)
-			currentIndexWrongSprite = 0;
+			currentIndexWrongSprite = 3;
 
 		image.sprite = obrWrong [currentIndexWrongSprite];
 		currentIndexWrongSprite = ++currentIndexWrongSprite;
+	}
+
+	private void ShowWrongImageOneToSliderShow() {
+		image.sprite = obrWrong [0];
+		Invoke ("ShowWrongImageTwoToslideShow", 3);
+	}
+
+	private void ShowWrongImageTwoToslideShow() {
+		image.sprite = obrWrong [1];
+		Invoke ("ShowWrongImageThreeToslideShow", 2);
+	}
+
+	private void ShowWrongImageThreeToslideShow() {
+		image.sprite = obrWrong [2];
+		currentIndexWrongSprite = ++currentIndexWrongSprite;
+		Invoke ("HideImage", 1);
 	}
 
 	private void ShowGoodImage(){
@@ -46,10 +62,16 @@ public class ImageAnswerScript : MonoBehaviour {
 
 	public void ShowImageWrongAfterPerson(){
 		LockKeyboard.LockKey ();
-		ShowWrongImage ();
-		image.color = noTransparent;
-		image.raycastTarget = true;
-		Invoke ("HideImage", 3);
+		if(currentIndexWrongSprite == 0) {
+			ShowWrongImageOneToSliderShow ();
+			image.color = noTransparent;
+			image.raycastTarget = true;
+		} else {
+			ShowWrongImage ();
+			image.color = noTransparent;
+			image.raycastTarget = true;
+			Invoke ("HideImage", 3);
+		}
 	}
 
 
