@@ -6,14 +6,15 @@ public class ImageAnswerScript : MonoBehaviour {
 	private Image image;
 	public Sprite[] obrWrong;
 	public Sprite[] obrGood;
-	private static int currentIndexWrongSprite = 0;
+	private static int currentIndexWrongSprite = 3;
 	private static int currentIndexGoodSprite = 0;
 	private Color32 transparent = new Color32(255,255,255,0);
 	private Color32 noTransparent = new Color32(255,255,255,255);
-
+	private bool isFirst;
 	// Use this for initialization
 	void Start () {
 		image = GetComponent<Image> ();
+		isFirst = true;
 	}
 		
 	private void ShowWrongImage(){
@@ -25,6 +26,7 @@ public class ImageAnswerScript : MonoBehaviour {
 	}
 
 	private void ShowWrongImageOneToSliderShow() {
+		isFirst = false;
 		image.sprite = obrWrong [0];
 		Invoke ("ShowWrongImageTwoToslideShow", 3);
 	}
@@ -62,7 +64,7 @@ public class ImageAnswerScript : MonoBehaviour {
 
 	public void ShowImageWrongAfterPerson(){
 		LockKeyboard.LockKey ();
-		if(currentIndexWrongSprite == 0) {
+		if (isFirst) {
 			ShowWrongImageOneToSliderShow ();
 			image.color = noTransparent;
 			image.raycastTarget = true;
@@ -73,8 +75,7 @@ public class ImageAnswerScript : MonoBehaviour {
 			Invoke ("HideImage", 3);
 		}
 	}
-
-
+		
 	public void ShowImageGood() {
 		LockKeyboard.LockKey ();
 		Invoke ("ShowImageGoodAfterPerson", 4);
@@ -86,11 +87,8 @@ public class ImageAnswerScript : MonoBehaviour {
 		image.color = noTransparent;
 		image.raycastTarget = true;
 		Invoke ("HideImageAndNextScene", 3);
-
-
 	}
-
-
+		
 	public static int GetWrongIndex() {
 		return currentIndexWrongSprite;
 	}

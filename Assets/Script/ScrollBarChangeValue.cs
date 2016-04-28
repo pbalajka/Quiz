@@ -19,7 +19,7 @@ public class ScrollBarChangeValue : MonoBehaviour {
 	public void ChangeValue(){
 		
 		if (scrollbar.value == 0f) {
-			Invoke ("ActiveWaterPerson", 4);
+			Invoke ("ActiveWaterPerson", 1.4f);
 
 		}
 		else 

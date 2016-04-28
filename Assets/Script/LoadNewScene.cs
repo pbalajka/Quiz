@@ -10,12 +10,15 @@ public class LoadNewScene : MonoBehaviour {
 		actualSceneTemp = ++actualSceneTemp;
 		actualScene = actualSceneTemp;
 		string scene;
-		//if(actualSceneTemp== 4 || actualSceneTemp== 7 || actualSceneTemp== 10 ) 
+		if (actualSceneTemp == 4 || actualSceneTemp == 7 || actualSceneTemp == 10) {
+			scene = "End1";
 		//	scene = "WaterPersonScene";
-		//scene = "End1";
-//			else
-		//	scene = question + actualSceneTemp.ToString ();
-		//SceneManager.LoadScene (scene, LoadSceneMode.Single);
+		}
+		else {
+			scene = question + actualSceneTemp.ToString ();
+		}
+			
+		SceneManager.LoadScene (scene, LoadSceneMode.Single);
 
 	
 	
