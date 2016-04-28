@@ -6,12 +6,12 @@ public class EndAfterWaterperson : MonoBehaviour {
 	void Start(){
 		InvokationEndGame ();
 	}
-	private void InvokationEndGame(){
-		Invoke ("EndGame", 3);
+	public void InvokationEndGame(){
+		Invoke ("EndGameQuiz", 3);
 	}
 
-	private void EndGame() {
+	private void EndGameQuiz() {
 		Application.Quit ();
-		Debug.Log("KOniec aplikacie");
+		Debug.Log("KOniec aplikacie po stlaceni END");
 	}
 }

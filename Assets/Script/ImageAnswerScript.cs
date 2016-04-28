@@ -86,7 +86,10 @@ public class ImageAnswerScript : MonoBehaviour {
 		image.color = noTransparent;
 		image.raycastTarget = true;
 		Invoke ("HideImageAndNextScene", 3);
+
+
 	}
+
 
 	public static int GetWrongIndex() {
 		return currentIndexWrongSprite;
