@@ -4,8 +4,13 @@ using UnityEngine.SceneManagement;
 public class CallWaterPersonEnd : MonoBehaviour {
 
 	public void CallWaterPerson(){
-		Debug.Log ("volam postavicku vody na konci");
+		Invoke ("OpenEndWaterPersonScene", 1);
+	}
+
+	private void OpenEndWaterPersonScene(){
 		SceneManager.LoadScene ("EndWaterPersonScene", LoadSceneMode.Single);
+		Debug.Log ("volam postavicku vody na konci");
+
 	}
 
 

@@ -6,8 +6,11 @@ using UnityEngine.SceneManagement;
 public class NextWindow : MonoBehaviour {
 
 	public void NextWin(){
+		Invoke ("OpenDescription",1);
+	}
+
+	private void OpenDescription(){
 		SceneManager.LoadScene ("Description", LoadSceneMode.Single);
 		print ("invoke Description");
-
 	}
 }
