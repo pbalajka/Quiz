@@ -1,17 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class EndAfterWaterperson : MonoBehaviour {
 
 	void Start(){
 		InvokationEndGame ();
 	}
 	public void InvokationEndGame(){
-		Invoke ("EndGameQuiz", 3);
+		Invoke ("Ending", 3);
 	}
 
-	private void EndGameQuiz() {
-		Application.Quit ();
-		Debug.Log("KOniec aplikacie po stlaceni END");
+	private void Ending() {
+		SceneManager.LoadScene ("End6", LoadSceneMode.Single);
+
 	}
 }

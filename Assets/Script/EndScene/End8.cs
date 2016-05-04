@@ -15,11 +15,9 @@ public class End8 : MonoBehaviour {
 
 	private void EndGame(){
 		if (End6.GetDownButtClick ()) {
-			print ("Download");
 			Application.OpenURL("http://unity3d.com/");
 			Application.Quit ();
 		} else {
-			print ("Koniec");
 			Application.Quit ();
 		}
 	}
