@@ -57,7 +57,6 @@ public class ImageAnswerScript : MonoBehaviour {
 	}
 
 	private void HideImageAndNextScene(){
-		HideImage ();
 		LockKeyboard.UnlockKey ();
 		LoadNewScene.NextScene ();
 	}
