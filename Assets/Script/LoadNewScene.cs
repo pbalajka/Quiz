@@ -13,7 +13,8 @@ public class LoadNewScene : MonoBehaviour {
 		string scene;
 
 		if (actualSceneTemp == 4 || actualSceneTemp == 7 || actualSceneTemp == 10) {
-			scene = "WaterPersonScene";
+			scene = "End1";
+			//scene = "WaterPersonScene";
 		} else if (actualSceneTemp != 13) {
 			scene = question + actualSceneTemp.ToString ();
 		} else {
