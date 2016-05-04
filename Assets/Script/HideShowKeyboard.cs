@@ -1,17 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class HideShowKeyboard : MonoBehaviour {
 	private TouchScreenKeyboard keyboard;
 	private bool ok = false;
 	private static bool wait = false;
 	public GameObject answerField;
+	private static bool block = false;
 
 	public void ShowKeyboard() {
-		if (Utils.IsMobil()) {
-			keyboard = TouchScreenKeyboard.Open ("", TouchScreenKeyboardType.Default, false, false, false, false);
-			ok = true;
+		if(!block) {
+			if (Utils.IsMobil()) {
+				keyboard = TouchScreenKeyboard.Open ("", TouchScreenKeyboardType.Default, false, false, false, false);
+				ok = true;
+			}
 		}
+	}
+
+	public static void LockButtonKeybort(){
+		block = true;
+	}
+
+	public static void UnLockButtonKeybort(){
+		block = false;
 	}
 
     void OnGUI() {		
