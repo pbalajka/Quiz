@@ -12,15 +12,12 @@ public class LoadNewScene : MonoBehaviour {
 		actualScene = actualSceneTemp;
 		string scene;
 
-		if(actualSceneTemp == 13) {
-			scene = "End1";
-		}
-
 		if (actualSceneTemp == 4 || actualSceneTemp == 7 || actualSceneTemp == 10) {
 			scene = "WaterPersonScene";
-		}
-		else {
+		} else if (actualSceneTemp != 13) {
 			scene = question + actualSceneTemp.ToString ();
+		} else {
+			scene = "End1";
 		}
 			
 		SceneManager.LoadScene (scene, LoadSceneMode.Single);
