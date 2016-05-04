@@ -63,6 +63,8 @@ public class ImageAnswerScript : MonoBehaviour {
 
 	public void ShowImageWrongAfterPerson(){
 		LockKeyboard.LockKey ();
+		print (" Aktualce cislo obrazku: " + currentIndexWrongSprite);
+		print (" Maximalne cislo zleho obrazku: " + obrWrong.Length);
 		if (isFirst) {
 			ShowWrongImageOneToSliderShow ();
 			image.color = noTransparent;

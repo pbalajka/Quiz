@@ -9,7 +9,7 @@ public class SmileScript : MonoBehaviour {
 	public Text text;
 	private Image image;
 	private static int currIndexGoodText = 0;
-	private static int currIndexBadText = 0;
+	private static int currIndexBadText = 6;
 
 
 	public void ShowGoodSmile() {
@@ -23,9 +23,11 @@ public class SmileScript : MonoBehaviour {
 	}
 
 	public void ShowBadSmile() {
-		if (currIndexGoodText >= LanguageForSmile.GetCountBadAnswer())
-			currIndexGoodText = 0;
+		if (currIndexBadText >= LanguageForSmile.GetCountBadAnswer())
+			currIndexBadText = 0;
 
+		print ("Maximalne cislo zleho smajlika : " + LanguageForSmile.GetCountBadAnswer());
+		print ("Aktualne cislo zleho smajlika : " + currIndexBadText);
 		text.text = LanguageForSmile.GetBadAnswer (currIndexBadText);
 		ShowBadSmileImage ();
 		currIndexGoodText = ++currIndexBadText; 
