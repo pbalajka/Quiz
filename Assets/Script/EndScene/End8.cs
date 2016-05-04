@@ -17,6 +17,7 @@ public class End8 : MonoBehaviour {
 		if (End6.GetDownButtClick ()) {
 			print ("Download");
 			Application.OpenURL("http://unity3d.com/");
+			Application.Quit ();
 		} else {
 			print ("Koniec");
 			Application.Quit ();
