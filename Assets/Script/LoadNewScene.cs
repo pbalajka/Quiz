@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadNewScene : MonoBehaviour {
 	private static int actualScene;
+
 	public static void NextScene() {
 		string question = "question_";
 		int actualSceneTemp = ActualSceneNunberScript.SceneNumber();
@@ -11,7 +12,7 @@ public class LoadNewScene : MonoBehaviour {
 		actualScene = actualSceneTemp;
 		string scene;
 
-		if(actualSceneTemp == 12) {
+		if(actualSceneTemp == 13) {
 			scene = "End1";
 		}
 

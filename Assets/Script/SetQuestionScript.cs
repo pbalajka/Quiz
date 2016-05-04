@@ -26,7 +26,7 @@ public class SetQuestionScript : MonoBehaviour {
 			GetComponent<Text>().text = MultiLanguageQuestScript.Get5Quest ();
 			break;
 		case 6:
-			GetComponent<Text>().text = MultiLanguageQuestScript.Get1Quest ();
+			GetComponent<Text>().text = MultiLanguageQuestScript.Get6Quest ();
 			break;
 		case 7:
 			GetComponent<Text>().text = MultiLanguageQuestScript.Get7Quest ();
