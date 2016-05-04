@@ -7,7 +7,6 @@ public class IntroTOsecondNextWndow : MonoBehaviour {
 	void Start () {
 		SetOldLanguage(PlayerPrefs.GetString("language", "ENG"));
 		Invoke ("NextLevel", 4);
-		PlayerPrefs.DeleteAll ();
 	}
 
 	void NextLevel() {
