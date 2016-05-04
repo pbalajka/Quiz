@@ -6,7 +6,7 @@ public class LanguageForDrinkWater : MonoBehaviour {
 	private static string[] drinkIT = {"Avete acqua potabile?\n", "Bere, ", "Cin cin.\n", "Necessario"};
 	private static string[] drinkESP = {"¿Tiene el agua potable?\n", "bebida, ", "¡Salud.\n", "Es necesario."};
 	private static string[] drinkPT = {"Você tem água potável?\n", "Bebida, ", "Saúde.\n", "Necessário."};
-	private static string[] drinkRU = {"У вас есть питьевая вода?\n", "Напиток нa здоровье.\n", "Приветствия.\n", "Надо вам пить воды."};
+	private static string[] drinkRU = {"У вас есть питьевая вода?\n", "Напиток нa здоровье. ,", "Приветствия.\n", "Надо вам пить воды."};
 
 	private static string errorENG = "Error";
 
