@@ -2,11 +2,11 @@
 using System.Collections;
 
 public class LanguageForDrinkWater : MonoBehaviour {
-	private static string[] drinkENG = {"Do you have drinking water?", "Drink", "Cheers", "It is necessary."};
-	private static string[] drinkIT = {"Avete acqua potabile?", "Bere", "Cin cin.", "Necessario"};
-	private static string[] drinkESP = {"¿Tiene el agua potable?", "bebida", "¡Salud.", "Es necesario."};
-	private static string[] drinkPT = {"Você tem água potável?", "Bebida", "Saúde.", "Necessário."};
-	private static string[] drinkRU = {"У вас есть питьевая вода?", "Напиток", "Приветствия.", "Это вам надо."};
+	private static string[] drinkENG = {"Do you have drinking water?\n", "Drink, ", "Cheers\n", "It is necessary."};
+	private static string[] drinkIT = {"Avete acqua potabile?\n", "Bere, ", "Cin cin.\n", "Necessario"};
+	private static string[] drinkESP = {"¿Tiene el agua potable?\n", "bebida, ", "¡Salud.\n", "Es necesario."};
+	private static string[] drinkPT = {"Você tem água potável?\n", "Bebida, ", "Saúde.\n", "Necessário."};
+	private static string[] drinkRU = {"У вас есть питьевая вода?\n", "Напиток\n", "Приветствия.\n", "Это вам надо."};
 
 	private static string errorENG = "Error";
 
