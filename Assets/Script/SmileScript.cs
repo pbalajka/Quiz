@@ -9,7 +9,7 @@ public class SmileScript : MonoBehaviour {
 	public Text text;
 	private Image image;
 	private static int currIndexGoodText = 0;
-	private static int currIndexBadText = 6;
+	private static int currIndexBadText = 0;
 
 
 	public void ShowGoodSmile() {

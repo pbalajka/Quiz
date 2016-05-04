@@ -10,7 +10,9 @@ public class ImageAnswerScript : MonoBehaviour {
 	private static int currentIndexGoodSprite = 0;
 	private Color32 transparent = new Color32(255,255,255,0);
 	private Color32 noTransparent = new Color32(255,255,255,255);
-	private bool isFirst;
+	private static bool isFirst;
+	private static bool pretocene = true;
+	private static bool teraz = true;
 	// Use this for initialization
 	void Start () {
 		image = GetComponent<Image> ();
@@ -18,15 +20,27 @@ public class ImageAnswerScript : MonoBehaviour {
 	}
 		
 	private void ShowWrongImage(){
-		if (currentIndexWrongSprite >= obrWrong.Length)
+		if (currentIndexWrongSprite >= obrWrong.Length) {
 			currentIndexWrongSprite = 3;
+		}
+		print (currentIndexWrongSprite);
 
 		image.sprite = obrWrong [currentIndexWrongSprite];
+
 		currentIndexWrongSprite = ++currentIndexWrongSprite;
+		if (currentIndexWrongSprite >= obrWrong.Length) {
+			if (pretocene) {
+				teraz = true;
+			}
+
+			pretocene = true;
+		}
 	}
 
 	private void ShowWrongImageOneToSliderShow() {
 		isFirst = false;
+		pretocene = false;
+		teraz = false;
 		image.sprite = obrWrong [0];
 		Invoke ("ShowWrongImageTwoToslideShow", 3);
 	}
@@ -38,7 +52,6 @@ public class ImageAnswerScript : MonoBehaviour {
 
 	private void ShowWrongImageThreeToslideShow() {
 		image.sprite = obrWrong [2];
-		currentIndexWrongSprite = ++currentIndexWrongSprite;
 		Invoke ("HideImage", 1);
 	}
 
@@ -63,12 +76,19 @@ public class ImageAnswerScript : MonoBehaviour {
 
 	public void ShowImageWrongAfterPerson(){
 		LockKeyboard.LockKey ();
-		print (" Aktualce cislo obrazku: " + currentIndexWrongSprite);
-		print (" Maximalne cislo zleho obrazku: " + obrWrong.Length);
+	
 		if (isFirst) {
-			ShowWrongImageOneToSliderShow ();
-			image.color = noTransparent;
-			image.raycastTarget = true;
+			if (pretocene && teraz) {
+				ShowWrongImageOneToSliderShow ();
+				image.color = noTransparent;
+				image.raycastTarget = true;
+			} else {
+				ShowWrongImage ();
+				image.color = noTransparent;
+				image.raycastTarget = true;
+				Invoke ("HideImage", 3);
+			}
+
 		} else {
 			ShowWrongImage ();
 			image.color = noTransparent;

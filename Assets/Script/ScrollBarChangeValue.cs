@@ -18,7 +18,6 @@ public class ScrollBarChangeValue : MonoBehaviour {
 
 
 	public void ChangeValue(){
-		
 		if (scrollbar.value == 0f) {
 			Invoke ("ActiveWaterPerson", 1.4f);
 			}
@@ -26,7 +25,6 @@ public class ScrollBarChangeValue : MonoBehaviour {
 			InactiveWaterPerson ();
 			ChangeColorFalse ();
 	}
-
 
 	void ChangeColorTrue(){
 		if (scrollbar.value == 0f) {
@@ -36,19 +34,15 @@ public class ScrollBarChangeValue : MonoBehaviour {
 			return;
 
 	}
+
 	void ChangeColorFalse(){
-		
-
 		butt.interactable = false;
-	
-
-
 	}
 
 	void ActiveWaterPerson(){
 		if (scrollbar.value == 0f) {
 			waterObj.SetActive (true);
-			Invoke ("ChangeColorTrue", 1.4f);
+			Invoke ("ChangeColorTrue", 2.5f);
 
 		}
 	}
