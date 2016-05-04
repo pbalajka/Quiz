@@ -7,7 +7,6 @@ public class LoadScript : MonoBehaviour {
 
 	void Start() {
 		string lang = PlayerPrefs.GetString("language", "ENG");
-		print (lang);
 		SetLanguage (lang);
 	}
 
