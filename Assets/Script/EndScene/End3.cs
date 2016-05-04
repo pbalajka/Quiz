@@ -9,21 +9,9 @@ public class End3 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		endStartAnimation = false;
 
-	}
 
-	// Update is called once per frame
-	void Update () {
-		if (GetComponent<Image> ().color.a == 1 && !endStartAnimation) {
-			endStartAnimation = true;
-			Invoke ("EndAnimation", 1);
-		}
-		if (GetComponent<Image> ().color.a == 0 && endStartAnimation) {
-
-			NextWin ();
-		}
-
+		Invoke ("NextWin", 1);
 	}
 
 	void NextWin(){
@@ -31,7 +19,4 @@ public class End3 : MonoBehaviour {
 	}
 
 
-	void EndAnimation(){
-		GetComponent<Animator> ().Play ("End");
-	}
 }

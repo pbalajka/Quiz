@@ -5,34 +5,18 @@ using UnityEngine.UI;
 
 
 public class End1 : MonoBehaviour {
-	private bool endStartAnimation;
-
+	
+	//4 sekundy tato scena
 
 	// Use this for initialization
 	void Start () {
-		endStartAnimation = false;
+		Invoke ("NextWin",4);
 	
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		if (GetComponent<Image> ().color.a == 1 && !endStartAnimation) {
-			endStartAnimation = true;
-			Invoke ("EndAnimation", 4);
-		}
-		if (GetComponent<Image> ().color.a == 0 && endStartAnimation) {
-			
-			NextWin ();
-		}
-	
-	}
+
 
 	void NextWin(){
 		SceneManager.LoadScene ("End2", LoadSceneMode.Single);
 	}
-
-
-	void EndAnimation(){
-		GetComponent<Animator> ().Play ("End");
-	}
+		
 }
