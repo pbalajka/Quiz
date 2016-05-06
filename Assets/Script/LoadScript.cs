@@ -38,9 +38,6 @@ public class LoadScript : MonoBehaviour {
 		ImageAnswerScript.SetFirst (isFirst);
 		isLoaded = isFirst;
 
-		print (isFirst);
-		print (pretocene);
-		print (teraz);
 	}
 
 	private void SetLanguage(string lang) {

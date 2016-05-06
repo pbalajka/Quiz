@@ -11,7 +11,7 @@ public class End5 : MonoBehaviour {
 		
 
 	void NextWin(){
-		SceneManager.LoadScene ("End6", LoadSceneMode.Single);
+		SceneManager.LoadScene ("End5,5", LoadSceneMode.Single);
 	}
 
 }
