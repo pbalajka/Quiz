@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadScript : MonoBehaviour {
 	private static string noLoaded = "nothing_to_do";
+	private static bool isLoaded = false;
 
 	void Start() {
 		string lang = PlayerPrefs.GetString("language", "ENG");
@@ -11,6 +12,7 @@ public class LoadScript : MonoBehaviour {
 	}
 
 	public void LoadGame() {
+		isLoaded = true;
 		// Nacitanie aktualnej odpovede
 		string answer = PlayerPrefs.GetString ("answer", noLoaded);
 		if(answer != noLoaded)
@@ -43,5 +45,16 @@ public class LoadScript : MonoBehaviour {
 		if (lang == EnumLanguagesScript.Language.RU.ToString ()) {
 			EnumLanguagesScript.SetLanguage (EnumLanguagesScript.Language.RU);
 		}
+	}
+
+	public static bool IsLoaded() {
+		return isLoaded;
+	}
+
+	// Pri nacitani t.j. po continue je isLoaded true. Ak sa uhadne nacitana otazka
+	// a zacne sa nova tak sa da na false, pretoce to uz nie je nacitana otazka.
+	// Pouyiva sa to pri zobrazeni chybnych odpovedi ci je isFirst alebo nie.
+	public static void SetNoLoadedAfterLoadedAnswer() {
+		isLoaded = false;
 	}
 }

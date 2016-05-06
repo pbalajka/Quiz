@@ -47,7 +47,8 @@ public class SmileScript : MonoBehaviour {
 	}
 
 	private void HideGoodSmile() {
-		LockKeyboard.UnlockKey ();
+		if(!SetCorrectLetter.IsAllWorndCorrect())
+			LockKeyboard.UnlockKey ();
 		gameObject.SetActive (false);
 	}
 

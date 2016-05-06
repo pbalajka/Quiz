@@ -11,15 +11,20 @@ public class SetCorrectLetter : MonoBehaviour {
 	private static int correctAnswer = 0;
 	private static string noLoaded = "nothing_to_do";
 	private static string loadedAnswer = noLoaded;
+	private static int answerLenght = 0;
+
 	// Use this for initialization
 	void Start () {
 		textField = GetComponent<Text> ();
 		correctAnswer = 0;
 		answer = LanguageAnswerScritp.GetAnswer (ActualSceneNunberScript.SceneNumber ());
+		answerLenght = answer.Length;
 		SetUnderscore ();
 		if (loadedAnswer != noLoaded) {
 			LoadAnswer ();
 		}
+
+		LockKeyboard.UnlockKey ();
 	}
 
 	private void SetUnderscore() {
@@ -98,6 +103,7 @@ public class SetCorrectLetter : MonoBehaviour {
 
 	private void CheckEndAnswer() {
 		if (correctAnswer == answer.Length) {
+			LockKeyboard.LockKey ();
 			Invoke ("ShowGoodImageAndNextScene", 3);
 		}
 	}
@@ -123,5 +129,9 @@ public class SetCorrectLetter : MonoBehaviour {
 
 	public static void SetLoadedAnswer(string loadedAns) {
 		loadedAnswer = loadedAns;
+	}
+
+	public static bool IsAllWorndCorrect() {
+		return correctAnswer == answerLenght;
 	}
 }

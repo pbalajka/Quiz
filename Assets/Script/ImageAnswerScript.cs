@@ -16,7 +16,11 @@ public class ImageAnswerScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		image = GetComponent<Image> ();
-		isFirst = true;
+
+		if(LoadScript.IsLoaded())
+			isFirst = false;
+		else
+			isFirst = true;
 	}
 		
 	private void ShowWrongImage(){
