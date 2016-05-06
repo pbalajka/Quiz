@@ -73,9 +73,6 @@ public class SetCorrectLetter : MonoBehaviour {
 		newTextField = newTextField.Remove (newTextField.Length - 1);
 		textField.text = newTextField;
 
-		print (" Dlzka odpovede: " + answer.Length);
-		print (" Aktualne spravnych: " + correctAnswer);
-
 		CheckEndAnswer ();
 	}
 

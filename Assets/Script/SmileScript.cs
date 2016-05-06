@@ -26,8 +26,6 @@ public class SmileScript : MonoBehaviour {
 		if (currIndexBadText >= LanguageForSmile.GetCountBadAnswer())
 			currIndexBadText = 0;
 
-		print ("Maximalne cislo zleho smajlika : " + LanguageForSmile.GetCountBadAnswer());
-		print ("Aktualne cislo zleho smajlika : " + currIndexBadText);
 		text.text = LanguageForSmile.GetBadAnswer (currIndexBadText);
 		ShowBadSmileImage ();
 		currIndexGoodText = ++currIndexBadText; 

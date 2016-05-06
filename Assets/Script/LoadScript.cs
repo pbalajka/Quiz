@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadScript : MonoBehaviour {
 	private static string noLoaded = "nothing_to_do";
-	private static bool isLoaded = false;
+	private static bool isLoaded = true;
 
 	void Start() {
 		string lang = PlayerPrefs.GetString("language", "ENG");
@@ -12,7 +12,6 @@ public class LoadScript : MonoBehaviour {
 	}
 
 	public void LoadGame() {
-		isLoaded = true;
 		// Nacitanie aktualnej odpovede
 		string answer = PlayerPrefs.GetString ("answer", noLoaded);
 		if(answer != noLoaded)
@@ -27,6 +26,21 @@ public class LoadScript : MonoBehaviour {
 		//Load good answer
 		int goodIndex = PlayerPrefs.GetInt ("goodIndex", 0);
 		ImageAnswerScript.SetGoodIndex (goodIndex);
+
+		bool teraz = bool.Parse(PlayerPrefs.GetString ("teraz", "true"));
+		ImageAnswerScript.SetTeraz (teraz);
+		 
+
+		bool pretocene = bool.Parse(PlayerPrefs.GetString ("pretocene", "true"));
+		ImageAnswerScript.SetPretocene (pretocene);
+
+		bool isFirst = bool.Parse(PlayerPrefs.GetString ("first", "true"));
+		ImageAnswerScript.SetFirst (isFirst);
+		isLoaded = isFirst;
+
+		print (isFirst);
+		print (pretocene);
+		print (teraz);
 	}
 
 	private void SetLanguage(string lang) {
@@ -55,6 +69,6 @@ public class LoadScript : MonoBehaviour {
 	// a zacne sa nova tak sa da na false, pretoce to uz nie je nacitana otazka.
 	// Pouyiva sa to pri zobrazeni chybnych odpovedi ci je isFirst alebo nie.
 	public static void SetNoLoadedAfterLoadedAnswer() {
-		isLoaded = false;
+		isLoaded = true;
 	}
 }

@@ -17,17 +17,16 @@ public class ImageAnswerScript : MonoBehaviour {
 	void Start () {
 		image = GetComponent<Image> ();
 
-		if(LoadScript.IsLoaded())
-			isFirst = false;
-		else
+		if (LoadScript.IsLoaded ())
 			isFirst = true;
+		else
+			isFirst = false;
 	}
 		
 	private void ShowWrongImage(){
 		if (currentIndexWrongSprite >= obrWrong.Length) {
 			currentIndexWrongSprite = 3;
 		}
-		print (currentIndexWrongSprite);
 
 		image.sprite = obrWrong [currentIndexWrongSprite];
 
@@ -128,5 +127,29 @@ public class ImageAnswerScript : MonoBehaviour {
 
 	public static void SetGoodIndex(int goodIndex) {
 		currentIndexGoodSprite = goodIndex;
+	}
+
+	public static bool GetPretocene() {
+		return pretocene;
+	}
+
+	public static bool GetFirst() {
+		return isFirst;
+	}
+
+	public static bool GetTeraz() {
+		return teraz;
+	}
+
+	public static void SetPretocene(bool pretoc) {
+		pretocene = pretoc;
+	}
+
+	public static void SetFirst(bool first) {
+		isFirst = first;
+	}
+
+	public static void SetTeraz(bool now) {
+		teraz = now;
 	}
 }

@@ -11,6 +11,5 @@ public class NextWindow : MonoBehaviour {
 
 	private void OpenDescription(){
 		SceneManager.LoadScene ("Description", LoadSceneMode.Single);
-		print ("invoke Description");
 	}
 }
