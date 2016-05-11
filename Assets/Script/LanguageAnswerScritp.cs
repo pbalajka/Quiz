@@ -6,9 +6,9 @@ public class LanguageAnswerScritp : MonoBehaviour {
 	private static string[] answerENG = {"laska","placer", "felicita", "beleza", "nadejus", "esthetique", "krasny", "te amo", "amo il", "eu te amo", "bog", "stvoritel" };
 
 	//Talianske odpovede
-	private static string[] answerIT= {"love","placer", "stesti", "beleza", "nadejus", "esthetique", "pekny", "te amo", "lubim sa", "eu te amo", "bog", "stvoritel" };
+	private static string[] answerIT= {"love","placer", "stesti", "beleza", "nadejus", "esthetique", "krasny", "te amo", "lubim sa", "eu te amo", "bog", "stvoritel" };
 
-	//Spanielske odpovede
+	//Spanielske odpovede 
 	private static string[] answerESP = {"love","placer", "felicita", "beleza", "nadejus", "esthetique", "nice", "milujem sa", "amo il", "te amo", "bog", "stvoritel" };
 
 	//Portugalske odpovede
