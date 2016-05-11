@@ -11,7 +11,7 @@ public class MultiLanguageQuestScript : MonoBehaviour {
 	private static string quest6ENG ="How do you say aesthetics in French?";
 	private static string quest7ENG ="How do you say beautiful in Slovak?";
 	private static string quest8ENG ="How do you say I love you in Spanish?";
-	private static string quest9ENG ="How do you say I love myself in Italian?";
+	private static string quest9ENG ="How do you say I love you in Italian?";
 	private static string quest10ENG ="How do you say I love you in Portuguese?";
 	private static string quest11ENG ="How do you say God in Russian?";
 	private static string quest12ENG ="How do you say creator in Slovak?";
