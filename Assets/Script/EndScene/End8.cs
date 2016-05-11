@@ -6,21 +6,26 @@ public class End8 : MonoBehaviour {
 
 	private bool endStartAnimation;
 
-
 	// Use this for initialization
 	void Start () {
+		Application.runInBackground = true;
 		Invoke ("EndGame", 1);
 	}
 
 	private void EndGame(){
 		if (End6.GetDownButtClick ()) {
 			Application.OpenURL("http://unity3d.com/");
-			Application.Quit ();
-			Debug.Log ("AkO koncii");
+			Invoke ("QuitGame", 1);
+	
+
 		} else {
 			Application.Quit ();
 			Debug.Log ("AkO koncii");
 
 		}
+	}
+
+	private void QuitGame(){
+		Application.Quit ();
 	}
 }
