@@ -4,7 +4,7 @@ using System.Collections;
 public class MultiLanguageQuestScript : MonoBehaviour {
 	//Anglicke otazky
 	private static string quest1ENG ="How do you say love in Czech?";
-	private static string quest2ENG ="How do you say joy in Spanish";
+	private static string quest2ENG ="How do you say joy in Spanish?";
 	private static string quest3ENG ="How do you say luck in Italian?";
 	private static string quest4ENG ="How do you say beauty in Portuguese?";
 	private static string quest5ENG ="How do you say hope in Russian?";
