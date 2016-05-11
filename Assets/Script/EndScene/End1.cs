@@ -11,7 +11,6 @@ public class End1 : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Invoke ("NextWin",4);
-	
 	}
 
 
