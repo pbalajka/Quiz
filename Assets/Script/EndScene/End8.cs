@@ -14,8 +14,8 @@ public class End8 : MonoBehaviour {
 
 	private void EndGame(){
 		if (End6.GetDownButtClick ()) {
-			Application.Quit ();
 			Application.OpenURL("http://unity3d.com/");
+			Application.Quit ();
 			Debug.Log ("AkO koncii");
 		} else {
 			Application.Quit ();

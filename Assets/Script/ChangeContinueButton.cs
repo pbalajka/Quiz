@@ -7,7 +7,7 @@ public class ChangeContinueButton : MonoBehaviour {
 	Button butt;
 	private static bool changedLanguage = false;
 	private bool alow;
-
+	private ColorBlock farba;
 	// Use this for initialization
 
 
@@ -20,7 +20,9 @@ public class ChangeContinueButton : MonoBehaviour {
 	void Update(){
 		if(alow)
 		PresedContinuButt ();
-	}
+		}
+
+
 		
 	void ChangeInteractebler(){
 		text =	gameObject.GetComponentsInChildren<Text> () [0];
@@ -36,7 +38,9 @@ public class ChangeContinueButton : MonoBehaviour {
 	private void BlockContinue() {
 		butt = GetComponent<Button> ();
 		butt.interactable = false;
-		text.color = new Color32 (1, 16, 255, 50);
+		farba=GetComponent<Button> ().colors;
+		farba.disabledColor = new Color32 (1, 16, 255, 50);
+		//	text.color = new Color32 (1, 16, 255, 50);
 		alow = false;
 
 	}
@@ -44,7 +48,9 @@ public class ChangeContinueButton : MonoBehaviour {
 	private void UnBlockContinue() {
 		butt = GetComponent<Button> ();
 		butt.interactable = true;
-		text.color = new Color32 (1, 16, 255, 255);
+		farba=GetComponent<Button> ().colors;
+		farba.normalColor = new Color32 (1, 16, 255, 255);
+		//text.color = new Color32 (1, 16, 255, 255);
 		alow = true;
 	}
 
