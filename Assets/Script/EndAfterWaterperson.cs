@@ -12,7 +12,7 @@ public class EndAfterWaterperson : MonoBehaviour {
 	}
 
 	private void Ending() {
-		SceneManager.LoadScene ("End6", LoadSceneMode.Single);
+		SceneManager.LoadScene ("End2", LoadSceneMode.Single);
 
 	}
 }
