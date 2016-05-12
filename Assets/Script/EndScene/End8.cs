@@ -14,7 +14,7 @@ public class End8 : MonoBehaviour {
 
 	private void EndGame(){
 		if (End6.GetDownButtClick ()) {
-			Application.OpenURL("http://unity3d.com/");
+			Application.OpenURL("https://play.google.com/store/apps/developer?id=eshopesource");
 			Invoke ("QuitGame", 1);
 	
 
