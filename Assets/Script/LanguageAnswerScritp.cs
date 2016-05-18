@@ -15,7 +15,7 @@ public class LanguageAnswerScritp : MonoBehaviour {
 	private static string[] answerPT = {"love","placer", "felicita", "krasa", "nadejus", "esthetique", "nice", "te amo", "amo il", "lubim ta", "bog", "stvoritel" };
 
 	//Ruske odpovede
-	private static string[] answerRU = {"ласка","плaцeр", "фeлицитa", "бeлeзa", "нaдeй", "ecтeтик", "ницe", "тэ амo", "amo ил", "eу тe aмo", "бог", "cтвopитeл" };
+	private static string[] answerRU = {"ласка","плaцeр", "фeлицитa", "бeлeзa", "надежда", "ecтeтик", "ницe", "тэ амo", "amo ил", "eу тe aмo", "бог", "cтвopитeл" };
 	//Error
 	private static string errorENG = "Error";
 

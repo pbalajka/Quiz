@@ -22,26 +22,40 @@ public class ImageAnswerScript : MonoBehaviour {
 		else
 			isFirst = false;
 	}
-		
+
+	//ak to prejde dookola tak to ide od cisla 3
 	private void ShowWrongImage(){
 		if (currentIndexWrongSprite >= obrWrong.Length) {
 			currentIndexWrongSprite = 3;
 		}
-
 		image.sprite = obrWrong [currentIndexWrongSprite];
 
+		//zvecsi sa cislo obrazku o jedna
 		currentIndexWrongSprite = ++currentIndexWrongSprite;
-		if (currentIndexWrongSprite >= obrWrong.Length) {
+		// ak to prejde dookola tak sa teraz=true, a pretocene true
+
+	}
+
+	public void ShowImageWrongAfterPerson(){
+		LockKeyboard.LockKey ();
+
+		if (isFirst) {
 			if (pretocene) {
-				teraz = true;
+				ShowWrongImageOneToSliderShow ();
+				image.color = noTransparent;
+				image.raycastTarget = true;
+			} else {
+				ShowWrongImage ();
+				image.color = noTransparent;
+				image.raycastTarget = true;
+				Invoke ("HideImage", 3);
 			}
 
-			pretocene = true;
-		}
+		} 
 	}
 
 	private void ShowWrongImageOneToSliderShow() {
-		isFirst = false;
+		isFirst = true;
 		pretocene = false;
 		teraz = false;
 		image.sprite = obrWrong [0];
@@ -77,29 +91,6 @@ public class ImageAnswerScript : MonoBehaviour {
 		LoadNewScene.NextScene ();
 	}
 
-	public void ShowImageWrongAfterPerson(){
-		LockKeyboard.LockKey ();
-	
-		if (isFirst) {
-			if (pretocene && teraz) {
-				ShowWrongImageOneToSliderShow ();
-				image.color = noTransparent;
-				image.raycastTarget = true;
-			} else {
-				ShowWrongImage ();
-				image.color = noTransparent;
-				image.raycastTarget = true;
-				Invoke ("HideImage", 3);
-			}
-
-		} else {
-			ShowWrongImage ();
-			image.color = noTransparent;
-			image.raycastTarget = true;
-			Invoke ("HideImage", 3);
-		}
-	}
-		
 	public void ShowImageGood() {
 		LockKeyboard.LockKey ();
 		Invoke ("ShowImageGoodAfterPerson", 4);
@@ -112,7 +103,7 @@ public class ImageAnswerScript : MonoBehaviour {
 		image.raycastTarget = true;
 		Invoke ("HideImageAndNextScene", 3);
 	}
-		
+
 	public static int GetWrongIndex() {
 		return currentIndexWrongSprite;
 	}

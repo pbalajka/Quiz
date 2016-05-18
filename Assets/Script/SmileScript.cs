@@ -10,7 +10,8 @@ public class SmileScript : MonoBehaviour {
 	private Image image;
 	private static int currIndexGoodText = 0;
 	private static int currIndexBadText = 0;
-
+	public Button save;
+	public Button exit;
 
 	public void ShowGoodSmile() {
 		if (currIndexGoodText >= LanguageForSmile.GetCountGoodAnswer())
@@ -34,19 +35,24 @@ public class SmileScript : MonoBehaviour {
 
 	private void ShowGoodSmileImage() {
 		LockKeyboard.LockKey ();
+		LockButt ();
 		ShowImage ();
 		GetComponent<Image> ().sprite = goodSmile;
 	}
 
 	private void ShowBadSmileImage() {
 		LockKeyboard.LockKey ();
+		LockButt ();
 		ShowImage ();
 		GetComponent<Image> ().sprite = badSmile;
 	}
 
 	private void HideGoodSmile() {
-		if(!SetCorrectLetter.IsAllWorndCorrect())
+		if (!SetCorrectLetter.IsAllWorndCorrect ()) {
 			LockKeyboard.UnlockKey ();
+			UnLockButt ();
+		}
+
 		gameObject.SetActive (false);
 	}
 
@@ -60,5 +66,16 @@ public class SmileScript : MonoBehaviour {
 	private void ShowBadPicture() {
 		imageAfterAnswer.GetComponent<ImageAnswerScript> ().ShowImageWrongAfterPerson ();
 		HideBadSmile ();
+		UnLockButt ();
+	}
+
+
+	private void LockButt(){
+		save.interactable = false;
+		exit.interactable = false;
+	}
+	private void UnLockButt(){
+		save.interactable = true;
+		exit.interactable = true;
 	}
 }
