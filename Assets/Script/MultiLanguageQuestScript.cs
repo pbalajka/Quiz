@@ -59,11 +59,11 @@ public class MultiLanguageQuestScript : MonoBehaviour {
 	private static string quest2RU ="Как скажeтcя, удовольствие на испанском языке ?";
 	private static string quest3RU ="Как скажeтcя, удачи на итальянском языке ?";
 	private static string quest4RU ="Как скажeтcя, красоту на португальском языке ?";
-	private static string quest5RU ="Как скажeтcя, надеюсь, словацкий язык ?";
+	private static string quest5RU ="Как скажeтcя, надежда, на словацком языке ?";
 	private static string quest6RU ="Как скажeтcя, эстетика на французском языке?";
 	private static string quest7RU ="Как скажeтcя, хороший на английскoм языкe ?";
 	private static string quest8RU ="Как скажeтcя, я тебя люблю говорить на испанском языке?";
-	private static string quest9RU ="Как скажeтcя, что я люблю себя по-итальянски?";
+	private static string quest9RU ="Как скажeтcя, что я люблю себя на итальянском языке ?";
 	private static string quest10RU ="Как скажeтcя, люблю тебя на португальском языке?";
 	private static string quest11RU ="Как скажeтcя, бог на чешскoм языкe ?";
 	private static string quest12RU ="Как скажeтcя, творца на словацкoм языкe ?";
