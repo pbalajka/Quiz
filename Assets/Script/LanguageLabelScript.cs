@@ -12,7 +12,7 @@ public class LanguageLabelScript : MonoBehaviour {
 	private static string questionENG = "Question";
 	//Talianske texty k tlacidlam a popisom
 	private static string saveIT="SALVA";
-	private static string endIT="ALLA FINE";
+	private static string endIT="FINE";
 	private static string orIT="o";
 	private static string continueIT="CONTINUARE";
 	private static string newGameIT="AVVIARE NUOVE";
@@ -20,7 +20,7 @@ public class LanguageLabelScript : MonoBehaviour {
 	private static string questionIT = "Domanda";
 	//Portugalske texty k tlacidlam a popisom
 	private static string savePT="SALVAR";
-	private static string endPT="FINALIZAR";
+	private static string endPT="SALIDA";
 	private static string orPT="ou";
 	private static string continuePT="CONTINUAR";
 	private static string newGamePT="INICIAR NOVO";
@@ -28,7 +28,7 @@ public class LanguageLabelScript : MonoBehaviour {
 	private static string questionPT = "Pergunta";
 	//Spanielske texty k tlacidlam a popipublic string SaveENG {
 	private static string saveESP="GUARDAR";
-	private static string endESP="TERMINAR";
+	private static string endESP="SALIDA";
 	private static string orESP="o";
 	private static string continueESP="CONTINUARE";
 	private static string newGameESP="INICIAR NUEVA";
